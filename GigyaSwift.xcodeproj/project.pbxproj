@@ -12,6 +12,7 @@
 		6B1A1B491C89A9F700E02C5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B1A1B471C89A9F700E02C5C /* Main.storyboard */; };
 		6B1A1B4B1C89A9F700E02C5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B1A1B4A1C89A9F700E02C5C /* Assets.xcassets */; };
 		6B1A1B4E1C89A9F700E02C5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B1A1B4C1C89A9F700E02C5C /* LaunchScreen.storyboard */; };
+		6B6EA5D21C89EC95009BDDFB /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 6B6EA5D11C89EC95009BDDFB /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		6B1A1B4A1C89A9F700E02C5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B1A1B4D1C89A9F700E02C5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B1A1B4F1C89A9F700E02C5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B6EA5D11C89EC95009BDDFB /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 			children = (
 				6B1A1B421C89A9F700E02C5C /* GigyaSwift */,
 				6B1A1B411C89A9F700E02C5C /* Products */,
+				6B6EA5D11C89EC95009BDDFB /* Podfile */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +127,7 @@
 			files = (
 				6B1A1B4E1C89A9F700E02C5C /* LaunchScreen.storyboard in Resources */,
 				6B1A1B4B1C89A9F700E02C5C /* Assets.xcassets in Resources */,
+				6B6EA5D21C89EC95009BDDFB /* Podfile in Resources */,
 				6B1A1B491C89A9F700E02C5C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +290,7 @@
 				6B1A1B541C89A9F700E02C5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
