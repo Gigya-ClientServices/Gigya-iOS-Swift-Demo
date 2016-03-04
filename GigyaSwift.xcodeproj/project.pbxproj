@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35AE40377D8B2A0BAAF269B0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D77C8F842CF634C7379AC17 /* libPods.a */; };
 		6B1A1B441C89A9F700E02C5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1A1B431C89A9F700E02C5C /* AppDelegate.swift */; };
 		6B1A1B461C89A9F700E02C5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1A1B451C89A9F700E02C5C /* ViewController.swift */; };
 		6B1A1B491C89A9F700E02C5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B1A1B471C89A9F700E02C5C /* Main.storyboard */; };
 		6B1A1B4B1C89A9F700E02C5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B1A1B4A1C89A9F700E02C5C /* Assets.xcassets */; };
 		6B1A1B4E1C89A9F700E02C5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B1A1B4C1C89A9F700E02C5C /* LaunchScreen.storyboard */; };
 		6B6EA5D21C89EC95009BDDFB /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 6B6EA5D11C89EC95009BDDFB /* Podfile */; };
+		6B6EA5DD1C89EF73009BDDFB /* GigyaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6EA5DC1C89EF73009BDDFB /* GigyaSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +25,12 @@
 		6B1A1B4A1C89A9F700E02C5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B1A1B4D1C89A9F700E02C5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B1A1B4F1C89A9F700E02C5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6B6EA5D11C89EC95009BDDFB /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		6B6EA5D11C89EC95009BDDFB /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6B6EA5DB1C89EE54009BDDFB /* GigyaSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GigyaSwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		6B6EA5DC1C89EF73009BDDFB /* GigyaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GigyaSDK.framework; sourceTree = "<group>"; };
+		7D77C8F842CF634C7379AC17 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5350D6DB19347889EB599C2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F068C83FDA61F83E75948C09 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,18 +38,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35AE40377D8B2A0BAAF269B0 /* libPods.a in Frameworks */,
+				6B6EA5DD1C89EF73009BDDFB /* GigyaSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51D58A9784777C7F2860C592 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D77C8F842CF634C7379AC17 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6B1A1B371C89A9F700E02C5C = {
 			isa = PBXGroup;
 			children = (
 				6B1A1B421C89A9F700E02C5C /* GigyaSwift */,
 				6B1A1B411C89A9F700E02C5C /* Products */,
 				6B6EA5D11C89EC95009BDDFB /* Podfile */,
+				E825B93CBF54F1384EB8E416 /* Pods */,
+				51D58A9784777C7F2860C592 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,7 +76,9 @@
 		6B1A1B421C89A9F700E02C5C /* GigyaSwift */ = {
 			isa = PBXGroup;
 			children = (
+				6B6EA5DC1C89EF73009BDDFB /* GigyaSDK.framework */,
 				6B1A1B431C89A9F700E02C5C /* AppDelegate.swift */,
+				6B6EA5DB1C89EE54009BDDFB /* GigyaSwift-Bridging-Header.h */,
 				6B1A1B451C89A9F700E02C5C /* ViewController.swift */,
 				6B1A1B471C89A9F700E02C5C /* Main.storyboard */,
 				6B1A1B4A1C89A9F700E02C5C /* Assets.xcassets */,
@@ -67,6 +88,15 @@
 			path = GigyaSwift;
 			sourceTree = "<group>";
 		};
+		E825B93CBF54F1384EB8E416 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A5350D6DB19347889EB599C2 /* Pods.debug.xcconfig */,
+				F068C83FDA61F83E75948C09 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6B1A1B521C89A9F700E02C5C /* Build configuration list for PBXNativeTarget "GigyaSwift" */;
 			buildPhases = (
+				5063270F35AE3FD54CECE157 /* Check Pods Manifest.lock */,
 				6B1A1B3C1C89A9F700E02C5C /* Sources */,
 				6B1A1B3D1C89A9F700E02C5C /* Frameworks */,
 				6B1A1B3E1C89A9F700E02C5C /* Resources */,
+				B7E973D8996EC68E2B6612C7 /* Embed Pods Frameworks */,
+				9812FAF57ACE5A366CD090CA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -133,6 +166,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5063270F35AE3FD54CECE157 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9812FAF57ACE5A366CD090CA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7E973D8996EC68E2B6612C7 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6B1A1B3C1C89A9F700E02C5C /* Sources */ = {
@@ -251,23 +332,47 @@
 		};
 		6B1A1B531C89A9F700E02C5C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5350D6DB19347889EB599C2 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/GigyaSDK.framework\"/**",
+					"$SRCROOT/**",
+					"$(PROJECT_DIR)/GigyaSwift",
+				);
 				INFOPLIST_FILE = GigyaSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nrasool.GigyaSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/nrasool.developer/Documents/SourceCode/GigyaSwift/GigyaSwift/GigyaSwift-Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		6B1A1B541C89A9F700E02C5C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F068C83FDA61F83E75948C09 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/GigyaSDK.framework\"/**",
+					"$SRCROOT/**",
+					"$(PROJECT_DIR)/GigyaSwift",
+				);
 				INFOPLIST_FILE = GigyaSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nrasool.GigyaSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/nrasool.developer/Documents/SourceCode/GigyaSwift/GigyaSwift/GigyaSwift-Bridging-Header.h";
 			};
 			name = Release;
 		};
