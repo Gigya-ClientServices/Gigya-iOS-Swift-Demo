@@ -9,11 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    @IBAction func myButtonPressed(sender: AnyObject) {
+        
+        
+        Gigya.showLoginProvidersDialogOver(self,
+            providers: ["facebook", "twitter", "googleplus"],
+            parameters: nil,
+            completionHandler: nil)
 
+        
+   }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        print("Hello World")
+
+        
     }
 
     override func didReceiveMemoryWarning() {
