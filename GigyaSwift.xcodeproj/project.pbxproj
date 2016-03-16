@@ -349,7 +349,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nrasool.GigyaSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/nrasool.developer/Documents/SourceCode/GigyaSwift/GigyaSwift/GigyaSwift-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "GigyaSwift/GigyaSwift-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -372,7 +372,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nrasool.GigyaSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/nrasool.developer/Documents/SourceCode/GigyaSwift/GigyaSwift/GigyaSwift-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "GigyaSwift/GigyaSwift-Bridging-Header.h";
 			};
 			name = Release;
 		};
