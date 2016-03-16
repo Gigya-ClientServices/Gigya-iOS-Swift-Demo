@@ -10,16 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
     @IBAction func myButtonPressed(sender: AnyObject) {
-        
         
         Gigya.showLoginProvidersDialogOver(self,
             providers: ["facebook", "twitter", "googleplus"],
             parameters: nil,
-            completionHandler: nil)
-
-        
+            completionHandler: { (user: GSUser!, error: NSError!) -> Void in
+                if error != nil {
+                    print("showLoginProvidersDialogOver Error: \(error.localizedDescription)")
+                } else {
+                    if let json = user.JSONString() {
+                        print("User: \(json)")
+                    }
+                }
+            })
    }
     
     override func viewDidLoad() {
