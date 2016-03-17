@@ -21,7 +21,10 @@ class ViewController: UIViewController {
                 } else {
                     if let json = user.JSONString() {
                         print("User: \(json)")
-                        
+                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        let viewController = storyboard.instantiateViewControllerWithIdentifier("CommentViewController") as UIViewController // Explicit cast is required here.
+                        viewController.modalTransitionStyle = .CoverVertical
+                        self.presentViewController(viewController, animated: true, completion: nil)
                         
                     }
                 }
