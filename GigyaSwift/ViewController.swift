@@ -15,12 +15,14 @@ class ViewController: UIViewController {
         Gigya.showLoginProvidersDialogOver(self,
             providers: ["facebook", "twitter", "googleplus"],
             parameters: nil,
-            completionHandler: { (user: GSUser!, error: NSError!) -> Void in
+            completionHandler:  {(user: GSUser!, error: NSError!) -> Void in
                 if error != nil {
                     print("showLoginProvidersDialogOver Error: \(error.localizedDescription)")
                 } else {
                     if let json = user.JSONString() {
                         print("User: \(json)")
+                        
+                        
                     }
                 }
             })

@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         Gigya.initWithAPIKey("3_maetISj1vIK2f6uWrM1gHaYHOxT-kKw-Y0g6D531hKF_8t74nBgbAHsJI4YUairG", application: application, launchOptions: launchOptions)
-
+         
         return true
     }
 
