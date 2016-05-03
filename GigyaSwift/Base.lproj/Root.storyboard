@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nzt-AC-DdH">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="6CB-FC-Bac">
+            <objects>
+                <viewController id="nzt-AC-DdH" customClass="RootViewController" customModule="GigyaSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="coc-w2-qHy"/>
+                        <viewControllerLayoutGuide type="bottom" id="aFt-Vx-N2e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MVy-3S-MhR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gigya iOS Demos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeI-hH-Eth" userLabel="Gigya iOS Demos">
+                                <rect key="frame" x="20" y="20" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BT2-18-k8G">
+                                <rect key="frame" x="20" y="49" width="560" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Native Social Login"/>
+                                <connections>
+                                    <action selector="nativeLoginButtonAction:" destination="nzt-AC-DdH" eventType="touchUpInside" id="Khw-Il-vec"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyS-1E-D3g">
+                                <rect key="frame" x="20" y="87" width="560" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Registration-as-a-Service"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile Session Management" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdf-L6-Q2K">
+                                <rect key="frame" x="20" y="125" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QfP-QC-IWD">
+                                <rect key="frame" x="20" y="149" width="560" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Mobile Session Check"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whX-TR-Y52">
+                                <rect key="frame" x="20" y="187" width="560" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="GSWebBridge"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fyl-bf-uHV">
+                                <rect key="frame" x="20" y="254" width="560" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Publish User Action"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSn-9A-n0c">
+                                <rect key="frame" x="20" y="292" width="560" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Comments View"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social Connectivity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pX-WV-yo5">
+                                <rect key="frame" x="20" y="225" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="whX-TR-Y52" firstAttribute="trailing" secondItem="9pX-WV-yo5" secondAttribute="trailing" id="1ZH-2y-Ht0"/>
+                            <constraint firstItem="cyS-1E-D3g" firstAttribute="top" secondItem="BT2-18-k8G" secondAttribute="bottom" constant="8" symbolic="YES" id="3Jl-3I-TGi"/>
+                            <constraint firstItem="QfP-QC-IWD" firstAttribute="leading" secondItem="whX-TR-Y52" secondAttribute="leading" id="3X3-P8-qhW"/>
+                            <constraint firstItem="jSn-9A-n0c" firstAttribute="top" secondItem="Fyl-bf-uHV" secondAttribute="bottom" constant="8" symbolic="YES" id="4IM-Im-67f"/>
+                            <constraint firstItem="eeI-hH-Eth" firstAttribute="leading" secondItem="MVy-3S-MhR" secondAttribute="leadingMargin" id="5dG-Km-QPM"/>
+                            <constraint firstItem="9pX-WV-yo5" firstAttribute="top" secondItem="whX-TR-Y52" secondAttribute="bottom" constant="8" symbolic="YES" id="8MK-dU-WVQ"/>
+                            <constraint firstItem="Fyl-bf-uHV" firstAttribute="trailing" secondItem="jSn-9A-n0c" secondAttribute="trailing" id="8jR-8v-xG8"/>
+                            <constraint firstItem="cyS-1E-D3g" firstAttribute="leading" secondItem="Cdf-L6-Q2K" secondAttribute="leading" id="AqB-VX-s5A"/>
+                            <constraint firstItem="QfP-QC-IWD" firstAttribute="top" secondItem="Cdf-L6-Q2K" secondAttribute="bottom" constant="3" id="BF6-OX-BIF"/>
+                            <constraint firstItem="eeI-hH-Eth" firstAttribute="trailing" secondItem="MVy-3S-MhR" secondAttribute="trailingMargin" id="CPJ-fp-9LB"/>
+                            <constraint firstItem="eeI-hH-Eth" firstAttribute="trailing" secondItem="BT2-18-k8G" secondAttribute="trailing" id="EN5-qp-pXY"/>
+                            <constraint firstItem="Fyl-bf-uHV" firstAttribute="leading" secondItem="jSn-9A-n0c" secondAttribute="leading" id="F7B-H1-4O0"/>
+                            <constraint firstItem="BT2-18-k8G" firstAttribute="trailing" secondItem="cyS-1E-D3g" secondAttribute="trailing" id="FEs-Pw-nh4"/>
+                            <constraint firstItem="eeI-hH-Eth" firstAttribute="top" secondItem="coc-w2-qHy" secondAttribute="bottom" id="IFR-c3-aRa"/>
+                            <constraint firstItem="Cdf-L6-Q2K" firstAttribute="leading" secondItem="QfP-QC-IWD" secondAttribute="leading" id="Iyf-rI-aXg"/>
+                            <constraint firstItem="cyS-1E-D3g" firstAttribute="trailing" secondItem="Cdf-L6-Q2K" secondAttribute="trailing" id="MUG-pK-fKh"/>
+                            <constraint firstItem="Fyl-bf-uHV" firstAttribute="top" secondItem="9pX-WV-yo5" secondAttribute="bottom" constant="8" symbolic="YES" id="NZ1-kb-cbr"/>
+                            <constraint firstItem="Cdf-L6-Q2K" firstAttribute="trailing" secondItem="QfP-QC-IWD" secondAttribute="trailing" id="RxD-4j-aYv"/>
+                            <constraint firstItem="BT2-18-k8G" firstAttribute="leading" secondItem="cyS-1E-D3g" secondAttribute="leading" id="SNd-7a-usi"/>
+                            <constraint firstItem="9pX-WV-yo5" firstAttribute="leading" secondItem="Fyl-bf-uHV" secondAttribute="leading" id="ULN-bd-Bbv"/>
+                            <constraint firstItem="QfP-QC-IWD" firstAttribute="trailing" secondItem="whX-TR-Y52" secondAttribute="trailing" id="Xn8-Fk-29a"/>
+                            <constraint firstItem="Cdf-L6-Q2K" firstAttribute="top" secondItem="cyS-1E-D3g" secondAttribute="bottom" constant="8" symbolic="YES" id="Yku-7w-m4i"/>
+                            <constraint firstItem="BT2-18-k8G" firstAttribute="top" secondItem="eeI-hH-Eth" secondAttribute="bottom" constant="8" symbolic="YES" id="oI3-Tv-kFv"/>
+                            <constraint firstItem="whX-TR-Y52" firstAttribute="leading" secondItem="9pX-WV-yo5" secondAttribute="leading" id="ooG-5P-WBI"/>
+                            <constraint firstItem="whX-TR-Y52" firstAttribute="top" secondItem="QfP-QC-IWD" secondAttribute="bottom" constant="8" symbolic="YES" id="pnu-dj-jg8"/>
+                            <constraint firstItem="eeI-hH-Eth" firstAttribute="leading" secondItem="BT2-18-k8G" secondAttribute="leading" id="we6-U4-Ok7"/>
+                            <constraint firstItem="9pX-WV-yo5" firstAttribute="trailing" secondItem="Fyl-bf-uHV" secondAttribute="trailing" id="xe1-Ir-3ex"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sk0-zp-Nbh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="563" y="37"/>
+        </scene>
+    </scenes>
+</document>

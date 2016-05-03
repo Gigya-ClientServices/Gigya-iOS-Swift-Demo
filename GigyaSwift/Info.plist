@@ -27,12 +27,12 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>com.googleusercontent.apps.4241565034-dreqj9oqr43564hf1locoeg7sfig4hsu</string>
 			</array>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
 		</dict>
 		<dict>
 			<key>CFBundleTypeRole</key>
@@ -91,9 +91,9 @@
 		<true/>
 	</dict>
 	<key>UILaunchStoryboardName</key>
-	<string>Main</string>
+	<string>Root</string>
 	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
+	<string>Root</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
