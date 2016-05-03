@@ -53,6 +53,12 @@ class RootViewController: UIViewController {
                     }
                 })
             }
+            let alert = UIAlertView(title: "Alert",
+                                    message: "You are already logged in!",
+                                    delegate: nil,
+                                    cancelButtonTitle:"OK"
+            )
+            alert.show()
         }
     }
     
