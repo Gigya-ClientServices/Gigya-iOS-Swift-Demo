@@ -14,29 +14,27 @@ class RootViewController: UIViewController {
     
     @IBAction func nativeLoginButtonAction(sender: AnyObject) {
         if (Gigya.session() == nil) {
-            var params: NSMutableDictionary
+            var params: NSMutableDictionary!
             Gigya.showLoginProvidersDialogOver(self,
-                                               providers: ["facebook", "twitter", "googleplus", "linkedin"],
-                                               parameters: nil,
-                                               completionHandler:  { (user: GSUser!, error: NSError!) -> Void in
-                                                if (error != nil && error.code != 200001) {
-                                                    let alert = UIAlertView(title: "Gigya Native Mobile Login",
-                                                        message: "There was a problem logging in with Gigya. Gigya returned error code \(error.code)",
-                                                        delegate: nil,
-                                                        cancelButtonTitle:"OK"
-                                                    )
-                                                    alert.show()
-                                                    print("showLoginProvidersDialogOver Error:\(error.localizedDescription)")
-                                                } else {
-                                                    if let json = user.JSONString() {
-                                                        print("User: \(json)")
-                                                        //let storyboard = UIStoryboard(name: "Root", bundle: nil)
-                                                        //let viewController = storyboard.instantiateViewControllerWithIdentifier("CommentViewController") as UIViewController // Explicit cast is required here.
-                                                        //viewController.modalTransitionStyle = .CoverVertical
-                                                        //self.presentViewController(viewController, animated: true, completion: nil)
-                                                    }
-                                                }
-                                            })
+                providers: ["facebook", "twitter", "googleplus", "linkedin"],
+                parameters: params as [NSObject : AnyObject],
+                completionHandler:  { (user: GSUser!, error: NSError!) -> Void in
+                    if (error != nil && error.code != 200001) {
+                        let alert = UIAlertView(title: "Gigya Native Mobile Login",
+                            message: "There was a problem logging in with Gigya. Gigya returned error code \(error.code)",
+                            delegate: nil,
+                            cancelButtonTitle:"OK"
+                        )
+                        alert.show()
+                        print("showLoginProvidersDialogOver Error:\(error.localizedDescription)")
+                    } else {
+                        // Anything?
+                        if let json = user.JSONString() {
+                            print("User: \(json)")
+                        }
+                    }
+                }
+            )
         }
         else {
             if ( self.user == nil ) {
@@ -51,7 +49,6 @@ class RootViewController: UIViewController {
                         print("Got error on getAccountInfo: \(error)")
                     }
                 })
-
             }
         }
     }
