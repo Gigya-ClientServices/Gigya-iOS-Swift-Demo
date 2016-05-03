@@ -14,10 +14,13 @@ class RootViewController: UIViewController {
     
     @IBAction func nativeLoginButtonAction(sender: AnyObject) {
         if (Gigya.session() == nil) {
-            var params: NSMutableDictionary!
+            // To set parameters, you can use a Swift dictionary instead of an NSMutableDictionary
+            var params = [String: NSObject]()
+            //params["facebookLoginBehavior"] = Int(FBSDKLoginBehavior.Native.rawValue)
+
             Gigya.showLoginProvidersDialogOver(self,
                 providers: ["facebook", "twitter", "googleplus", "linkedin"],
-                parameters: params as [NSObject : AnyObject],
+                parameters: params,
                 completionHandler:  { (user: GSUser!, error: NSError!) -> Void in
                     if (error != nil && error.code != 200001) {
                         let alert = UIAlertView(title: "Gigya Native Mobile Login",
