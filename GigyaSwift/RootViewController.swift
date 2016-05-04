@@ -16,19 +16,20 @@ class RootViewController: UIViewController, GSPluginViewDelegate, GSAccountsDele
         if (Gigya.session() == nil) {
             // To set parameters, you can use a Swift dictionary instead of an NSMutableDictionary
             var params = [String: AnyObject]()
-            //params["facebookLoginBehavior"] = Int(FBSDKLoginBehavior.Native.rawValue)
+            params["facebookLoginBehavior"] = Int(FBSDKLoginBehavior.Native.rawValue)
 
             Gigya.showLoginProvidersDialogOver(self,
                 providers: ["facebook", "twitter", "googleplus", "linkedin"],
                 parameters: params,
                 completionHandler:  { (user: GSUser!, error: NSError!) -> Void in
                     if (error != nil && error.code != 200001) {
-                        let alert = UIAlertView(title: "Gigya Native Mobile Login",
+                        let alert = UIAlertController(title: "Gigya Native Mobile Login",
                             message: "There was a problem logging in with Gigya. Gigya returned error code \(error.code)",
-                            delegate: nil,
-                            cancelButtonTitle:"OK"
-                        )
-                        alert.show()
+                            preferredStyle: UIAlertControllerStyle.Alert)
+                        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default) { (action) -> Void in
+                            print("Alert closed")
+                            })
+                        self.presentViewController(alert, animated: true, completion: nil)
                         print("showLoginProvidersDialogOver Error:\(error.localizedDescription)")
                     } else {
                         // Anything?
@@ -41,7 +42,7 @@ class RootViewController: UIViewController, GSPluginViewDelegate, GSAccountsDele
         }
         else {
             if ( self.user == nil ) {
-                // Make Request to get User if it's empty.
+                // Make Request to 'accounts.getAccountInfo' to get user if it's empty.
                 // Step 1 - Create the request and set the parameters
                 let request = GSRequest(forMethod: "accounts.getAccountInfo")
                 request.sendWithResponseHandler({(response: GSResponse!, error: NSError!) -> Void in
@@ -53,12 +54,13 @@ class RootViewController: UIViewController, GSPluginViewDelegate, GSAccountsDele
                     }
                 })
             }
-            let alert = UIAlertView(title: "Alert",
-                                    message: "You are already logged in!",
-                                    delegate: nil,
-                                    cancelButtonTitle:"OK"
-            )
-            alert.show()
+            let alert = UIAlertController(title: "Gigya Native Login",
+                                          message: "You are already logged in",
+                                          preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default) { (action) -> Void in
+                print("Alert closed")
+                })
+            self.presentViewController(alert, animated: true, completion: nil)
         }
     }
     
@@ -75,15 +77,49 @@ class RootViewController: UIViewController, GSPluginViewDelegate, GSAccountsDele
                 }
                 else {
                     // Handle error
-                    let alert = UIAlertView(title: "Error with login",
+                    let alert = UIAlertController(title: "Error with login",
                         message: error.localizedDescription,
-                        delegate: nil,
-                        cancelButtonTitle:"OK"
-                    )
-                    alert.show()
+                        preferredStyle: UIAlertControllerStyle.Alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default) { (action) -> Void in
+                        print("Alert closed")
+                        })
+                    self.presentViewController(alert, animated: true, completion: nil)
                 }
             },
             delegate: self)
+    }
+    
+    @IBAction func mobileSessionCheckButtonAction(sender: AnyObject) {
+        print("mobileSessionCheckButtonAction called")
+        
+        // Is there a Gigya session?
+        if (Gigya.session() == nil) {
+            let alert = UIAlertController(title: "Gigya Session Test",
+                                          message: "You are not logged in",
+                                          preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default) { (action) -> Void in
+                    print("Alert closed")
+                })
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+        else {
+            let request = GSRequest(forMethod: "accounts.getAccountInfo")
+            request.sendWithResponseHandler({(response: GSResponse!, error: NSError!) -> Void in
+                if (error == nil) {
+                    self.user = response as? GSAccount
+                    let alert = UIAlertController(title: "Gigya Session Test",
+                        message: "User is logged in\n\(response["profile"]["firstName"]) \(response["profile"]["lastName"]), \(response["profile"]["email"])",
+                        preferredStyle: UIAlertControllerStyle.Alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default) { (action) -> Void in
+                        print("Alert closed")
+                        })
+                    self.presentViewController(alert, animated: true, completion: nil)
+                }
+                else {
+                    print("Got error on getAccountInfo: \(error)")
+                }
+            })
+        }
     }
     
     //
@@ -106,12 +142,13 @@ class RootViewController: UIViewController, GSPluginViewDelegate, GSAccountsDele
     //
     func accountDidLogin(account: GSAccount) -> Void {
         self.user = account
-        let alert = UIAlertView(title: "Gigya Session Test",
-                                message: "You have logged in!",
-                                delegate: nil,
-                                cancelButtonTitle:"OK"
-        )
-        alert.show()
+        let alert = UIAlertController(title: "Gigya Session Test",
+                                      message: "You have logged in",
+                                      preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default) { (action) -> Void in
+            print("Alert closed")
+            })
+        self.presentViewController(alert, animated: true, completion: nil)
     }
     
     func accountDidLogout() -> Void {

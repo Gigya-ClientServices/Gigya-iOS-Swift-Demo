@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Gigya iOS Swift Demo-->
@@ -17,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BT2-18-k8G">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BT2-18-k8G">
                                 <rect key="frame" x="20" y="72" width="560" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Native Social Login"/>
@@ -25,7 +26,7 @@
                                     <action selector="nativeLoginButtonAction:" destination="nzt-AC-DdH" eventType="touchUpInside" id="Khw-Il-vec"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyS-1E-D3g">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyS-1E-D3g">
                                 <rect key="frame" x="20" y="110" width="560" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Registration-as-a-Service"/>
@@ -33,33 +34,36 @@
                                     <action selector="showScreenSet:" destination="nzt-AC-DdH" eventType="touchUpInside" id="5Qp-4I-aNc"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Mobile Session Management" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdf-L6-Q2K">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile Session Management" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdf-L6-Q2K">
                                 <rect key="frame" x="20" y="148" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QfP-QC-IWD">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QfP-QC-IWD">
                                 <rect key="frame" x="20" y="172" width="560" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Mobile Session Check"/>
+                                <connections>
+                                    <action selector="mobileSessionCheckButtonAction:" destination="nzt-AC-DdH" eventType="touchUpInside" id="UvI-f8-hNa"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whX-TR-Y52">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whX-TR-Y52">
                                 <rect key="frame" x="20" y="210" width="560" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="GSWebBridge"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fyl-bf-uHV">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fyl-bf-uHV">
                                 <rect key="frame" x="20" y="277" width="560" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Publish User Action"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSn-9A-n0c">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSn-9A-n0c">
                                 <rect key="frame" x="20" y="315" width="560" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Comments View"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Social Connectivity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pX-WV-yo5">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social Connectivity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pX-WV-yo5">
                                 <rect key="frame" x="20" y="248" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -68,27 +72,30 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Cdf-L6-Q2K" firstAttribute="trailing" secondItem="QfP-QC-IWD" secondAttribute="trailing" id="1zZ-gw-Jac"/>
-                            <constraint firstItem="9pX-WV-yo5" firstAttribute="top" secondItem="whX-TR-Y52" secondAttribute="bottom" constant="8" symbolic="YES" id="247-gI-5ls"/>
-                            <constraint firstItem="9pX-WV-yo5" firstAttribute="trailing" secondItem="Fyl-bf-uHV" secondAttribute="trailing" id="AKQ-dB-Svz"/>
-                            <constraint firstItem="Cdf-L6-Q2K" firstAttribute="top" secondItem="cyS-1E-D3g" secondAttribute="bottom" constant="8" symbolic="YES" id="B27-Te-oVN"/>
-                            <constraint firstItem="BT2-18-k8G" firstAttribute="leading" secondItem="cyS-1E-D3g" secondAttribute="leading" id="EiQ-fy-NqD"/>
-                            <constraint firstItem="QfP-QC-IWD" firstAttribute="top" secondItem="Cdf-L6-Q2K" secondAttribute="bottom" constant="3" id="H14-gj-CbH"/>
-                            <constraint firstItem="Fyl-bf-uHV" firstAttribute="trailing" secondItem="jSn-9A-n0c" secondAttribute="trailing" id="M9H-V8-5My"/>
-                            <constraint firstItem="Fyl-bf-uHV" firstAttribute="leading" secondItem="jSn-9A-n0c" secondAttribute="leading" id="MPa-20-rqn"/>
-                            <constraint firstItem="QfP-QC-IWD" firstAttribute="trailing" secondItem="whX-TR-Y52" secondAttribute="trailing" id="PNK-B0-MZ3"/>
-                            <constraint firstItem="cyS-1E-D3g" firstAttribute="top" secondItem="BT2-18-k8G" secondAttribute="bottom" constant="8" symbolic="YES" id="YQt-lx-q2N"/>
-                            <constraint firstItem="cyS-1E-D3g" firstAttribute="leading" secondItem="Cdf-L6-Q2K" secondAttribute="leading" id="akv-lK-rUi"/>
-                            <constraint firstItem="QfP-QC-IWD" firstAttribute="leading" secondItem="whX-TR-Y52" secondAttribute="leading" id="anQ-B9-0Tp"/>
-                            <constraint firstItem="whX-TR-Y52" firstAttribute="top" secondItem="QfP-QC-IWD" secondAttribute="bottom" constant="8" symbolic="YES" id="bnr-AY-qIZ"/>
-                            <constraint firstItem="cyS-1E-D3g" firstAttribute="trailing" secondItem="Cdf-L6-Q2K" secondAttribute="trailing" id="cv0-tB-Slw"/>
-                            <constraint firstItem="whX-TR-Y52" firstAttribute="trailing" secondItem="9pX-WV-yo5" secondAttribute="trailing" id="g1i-GN-GHU"/>
-                            <constraint firstItem="BT2-18-k8G" firstAttribute="trailing" secondItem="cyS-1E-D3g" secondAttribute="trailing" id="kP6-fT-0PV"/>
-                            <constraint firstItem="whX-TR-Y52" firstAttribute="leading" secondItem="9pX-WV-yo5" secondAttribute="leading" id="mdG-D6-yRV"/>
-                            <constraint firstItem="Fyl-bf-uHV" firstAttribute="top" secondItem="9pX-WV-yo5" secondAttribute="bottom" constant="8" symbolic="YES" id="o0K-oj-HFg"/>
-                            <constraint firstItem="Cdf-L6-Q2K" firstAttribute="leading" secondItem="QfP-QC-IWD" secondAttribute="leading" id="rJO-zo-c81"/>
-                            <constraint firstItem="jSn-9A-n0c" firstAttribute="top" secondItem="Fyl-bf-uHV" secondAttribute="bottom" constant="8" symbolic="YES" id="ux0-FS-5BJ"/>
-                            <constraint firstItem="9pX-WV-yo5" firstAttribute="leading" secondItem="Fyl-bf-uHV" secondAttribute="leading" id="vJZ-r1-5ZO"/>
+                            <constraint firstItem="whX-TR-Y52" firstAttribute="leading" secondItem="9pX-WV-yo5" secondAttribute="leading" id="3AE-lp-sVs"/>
+                            <constraint firstItem="cyS-1E-D3g" firstAttribute="trailing" secondItem="Cdf-L6-Q2K" secondAttribute="trailing" id="3SZ-1g-bgv"/>
+                            <constraint firstItem="Fyl-bf-uHV" firstAttribute="trailing" secondItem="jSn-9A-n0c" secondAttribute="trailing" id="8tb-Rg-pjn"/>
+                            <constraint firstItem="QfP-QC-IWD" firstAttribute="leading" secondItem="whX-TR-Y52" secondAttribute="leading" id="Aje-69-FGU"/>
+                            <constraint firstItem="Fyl-bf-uHV" firstAttribute="top" secondItem="9pX-WV-yo5" secondAttribute="bottom" constant="8" symbolic="YES" id="Gah-zu-Rr8"/>
+                            <constraint firstItem="whX-TR-Y52" firstAttribute="top" secondItem="QfP-QC-IWD" secondAttribute="bottom" constant="8" symbolic="YES" id="IMJ-rI-hs5"/>
+                            <constraint firstItem="BT2-18-k8G" firstAttribute="leading" secondItem="MVy-3S-MhR" secondAttribute="leadingMargin" id="IMX-Il-VCS"/>
+                            <constraint firstItem="jSn-9A-n0c" firstAttribute="top" secondItem="Fyl-bf-uHV" secondAttribute="bottom" constant="8" symbolic="YES" id="JVz-DW-mVQ"/>
+                            <constraint firstItem="9pX-WV-yo5" firstAttribute="leading" secondItem="Fyl-bf-uHV" secondAttribute="leading" id="Jh9-Mj-34J"/>
+                            <constraint firstItem="cyS-1E-D3g" firstAttribute="top" secondItem="BT2-18-k8G" secondAttribute="bottom" constant="8" symbolic="YES" id="Lh0-3H-KXd"/>
+                            <constraint firstItem="Cdf-L6-Q2K" firstAttribute="top" secondItem="cyS-1E-D3g" secondAttribute="bottom" constant="8" symbolic="YES" id="Qaf-eP-Bhb"/>
+                            <constraint firstItem="BT2-18-k8G" firstAttribute="leading" secondItem="cyS-1E-D3g" secondAttribute="leading" id="VbV-El-5Uk"/>
+                            <constraint firstItem="Fyl-bf-uHV" firstAttribute="leading" secondItem="jSn-9A-n0c" secondAttribute="leading" id="W13-3d-DBE"/>
+                            <constraint firstItem="BT2-18-k8G" firstAttribute="trailing" secondItem="MVy-3S-MhR" secondAttribute="trailingMargin" id="WHX-yc-sbC"/>
+                            <constraint firstItem="9pX-WV-yo5" firstAttribute="trailing" secondItem="Fyl-bf-uHV" secondAttribute="trailing" id="WoC-55-vzS"/>
+                            <constraint firstItem="9pX-WV-yo5" firstAttribute="top" secondItem="whX-TR-Y52" secondAttribute="bottom" constant="8" symbolic="YES" id="b6a-uY-Y43"/>
+                            <constraint firstItem="QfP-QC-IWD" firstAttribute="trailing" secondItem="whX-TR-Y52" secondAttribute="trailing" id="dPo-Yk-Hxx"/>
+                            <constraint firstItem="BT2-18-k8G" firstAttribute="trailing" secondItem="cyS-1E-D3g" secondAttribute="trailing" id="hHU-Ys-ZN8"/>
+                            <constraint firstItem="whX-TR-Y52" firstAttribute="trailing" secondItem="9pX-WV-yo5" secondAttribute="trailing" id="jRO-iY-3pX"/>
+                            <constraint firstItem="cyS-1E-D3g" firstAttribute="leading" secondItem="Cdf-L6-Q2K" secondAttribute="leading" id="l5a-96-Ay4"/>
+                            <constraint firstItem="BT2-18-k8G" firstAttribute="top" secondItem="coc-w2-qHy" secondAttribute="bottom" constant="8" symbolic="YES" id="rWi-mo-zZy"/>
+                            <constraint firstItem="Cdf-L6-Q2K" firstAttribute="trailing" secondItem="QfP-QC-IWD" secondAttribute="trailing" id="uS6-nc-rE3"/>
+                            <constraint firstItem="Cdf-L6-Q2K" firstAttribute="leading" secondItem="QfP-QC-IWD" secondAttribute="leading" id="xIf-Ig-Nat"/>
+                            <constraint firstItem="QfP-QC-IWD" firstAttribute="top" secondItem="Cdf-L6-Q2K" secondAttribute="bottom" constant="3" id="yjj-4M-3Wv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Gigya iOS Swift Demo" id="ZmY-Ag-thR"/>
