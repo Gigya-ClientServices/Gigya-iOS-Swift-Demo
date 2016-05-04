@@ -17,7 +17,9 @@ class RootViewController: UIViewController, GSPluginViewDelegate, GSAccountsDele
             // To set parameters, you can use a Swift dictionary instead of an NSMutableDictionary
             var params = [String: AnyObject]()
             params["facebookLoginBehavior"] = Int(FBSDKLoginBehavior.Native.rawValue)
-
+            // Removing the above example parameter due to FB's recent breaking change to the Native Login Behavior
+            params.removeAll()
+            
             Gigya.showLoginProvidersDialogOver(self,
                 providers: ["facebook", "twitter", "googleplus", "linkedin"],
                 parameters: params,
