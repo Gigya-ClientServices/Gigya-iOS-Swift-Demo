@@ -26,7 +26,13 @@
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
 	<array>
-		<dict>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>fb1041182865932861</string>
+            </array>
+        </dict>
+        <dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
@@ -55,10 +61,10 @@
 	<string>1.0</string>
 	<key>DisableTwitterNativeLogin</key>
 	<false/>
-	<key>FacebookAppID</key>
-	<string>64368537493</string>
-	<key>FacebookDisplayName</key>
-	<string>Gigya Socialize</string>
+    <key>FacebookAppID</key>
+    <string>1041182865932861</string>
+    <key>FacebookDisplayName</key>
+    <string>Evan's Gigya App</string>
 	<key>GigyaLogEnabled</key>
 	<false/>
 	<key>GigyaLoginDontLeaveApp</key>

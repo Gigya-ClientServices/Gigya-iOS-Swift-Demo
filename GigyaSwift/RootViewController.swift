@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RootViewController: UIViewController, GSPluginViewDelegate {
+class RootViewController: UIViewController, GSPluginViewDelegate, GSAccountsDelegate {
     
     var user: GSAccount?
     
@@ -86,7 +86,9 @@ class RootViewController: UIViewController, GSPluginViewDelegate {
             delegate: self)
     }
     
+    //
     // GSPluginViewDelegate methods
+    //
     func pluginView(pluginView: GSPluginView!, finishedLoadingPluginWithEvent event: [NSObject : AnyObject]!) {
         print("Finished loading plugin with event: \(event)")
     }
@@ -99,11 +101,29 @@ class RootViewController: UIViewController, GSPluginViewDelegate {
         print("Plugin failed with error: \(error)")
     }
     
+    //
+    // GSAccountsDelegate
+    //
+    func accountDidLogin(account: GSAccount) -> Void {
+        self.user = account
+        let alert = UIAlertView(title: "Gigya Session Test",
+                                message: "You have logged in!",
+                                delegate: nil,
+                                cancelButtonTitle:"OK"
+        )
+        alert.show()
+    }
+    
+    func accountDidLogout() -> Void {
+        self.user = nil
+    }
+    
+    //
+    // Standard UIViewController method stubs
+    //
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        
     }
     
     override func didReceiveMemoryWarning() {
