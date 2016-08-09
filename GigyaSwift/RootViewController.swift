@@ -124,6 +124,10 @@ class RootViewController: UIViewController, GSPluginViewDelegate, GSAccountsDele
         }
     }
     
+    @IBAction func doneWithView(segue:UIStoryboardSegue) {
+        
+    }
+    
     //
     // GSPluginViewDelegate methods
     //

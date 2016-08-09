@@ -34,7 +34,7 @@
                     <navigationItem key="navigationItem" title="GSWebBridge" id="jvj-V8-vRb" userLabel="GSWebBridge">
                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="Ps1-re-zsD">
                             <connections>
-                                <segue destination="LZD-Yr-UNC" kind="show" id="8Wq-7L-fTp"/>
+                                <segue destination="Bw5-L6-qoZ" kind="unwind" unwindAction="doneWithView:" id="CwM-wu-CX3"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -43,6 +43,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CBv-Tx-Op4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Bw5-L6-qoZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="347" y="-313"/>
         </scene>
@@ -63,14 +64,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cPh-5B-D6Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-465" y="-313"/>
-        </scene>
-        <!--Root-->
-        <scene sceneID="AqZ-bd-G7h">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Root" id="LZD-Yr-UNC" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6U8-wz-Lqp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-61.5" y="-574"/>
         </scene>
     </scenes>
 </document>
