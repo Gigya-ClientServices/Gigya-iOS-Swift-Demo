@@ -14,6 +14,8 @@
 		6B6EA5D21C89EC95009BDDFB /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 6B6EA5D11C89EC95009BDDFB /* Podfile */; };
 		6B6EA5DD1C89EF73009BDDFB /* GigyaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6EA5DC1C89EF73009BDDFB /* GigyaSDK.framework */; };
 		C8B9966B1CD91C340003F305 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B9966A1CD91C340003F305 /* RootViewController.swift */; };
+		C8BFAF061CDBB8350020138E /* GSWebBridge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8BFAF051CDBB8350020138E /* GSWebBridge.storyboard */; };
+		C8BFAF081CDBB9290020138E /* GSWebBridgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BFAF071CDBB9290020138E /* GSWebBridgeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		7D77C8F842CF634C7379AC17 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5350D6DB19347889EB599C2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C8B9966A1CD91C340003F305 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		C8BFAF051CDBB8350020138E /* GSWebBridge.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GSWebBridge.storyboard; sourceTree = "<group>"; };
+		C8BFAF071CDBB9290020138E /* GSWebBridgeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GSWebBridgeViewController.swift; sourceTree = "<group>"; };
 		F068C83FDA61F83E75948C09 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,10 +79,12 @@
 			isa = PBXGroup;
 			children = (
 				6B6EA5DC1C89EF73009BDDFB /* GigyaSDK.framework */,
-				6B1A1B431C89A9F700E02C5C /* AppDelegate.swift */,
 				6B6EA5DB1C89EE54009BDDFB /* GigyaSwift-Bridging-Header.h */,
+				6B1A1B431C89A9F700E02C5C /* AppDelegate.swift */,
 				C8B9966A1CD91C340003F305 /* RootViewController.swift */,
+				C8BFAF071CDBB9290020138E /* GSWebBridgeViewController.swift */,
 				6B1A1B471C89A9F700E02C5C /* Root.storyboard */,
+				C8BFAF051CDBB8350020138E /* GSWebBridge.storyboard */,
 				6B1A1B4A1C89A9F700E02C5C /* Assets.xcassets */,
 				6B1A1B4F1C89A9F700E02C5C /* Info.plist */,
 			);
@@ -157,6 +163,7 @@
 			files = (
 				6B1A1B4B1C89A9F700E02C5C /* Assets.xcassets in Resources */,
 				6B6EA5D21C89EC95009BDDFB /* Podfile in Resources */,
+				C8BFAF061CDBB8350020138E /* GSWebBridge.storyboard in Resources */,
 				6B1A1B491C89A9F700E02C5C /* Root.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B1A1B441C89A9F700E02C5C /* AppDelegate.swift in Sources */,
+				C8BFAF081CDBB9290020138E /* GSWebBridgeViewController.swift in Sources */,
 				C8B9966B1CD91C340003F305 /* RootViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
