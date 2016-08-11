@@ -47,16 +47,21 @@ class PublishActionController: UIViewController {
                 })
             }
             var userAction : [String: AnyObject] = [:]
-            userAction["title"] = "Gigya iOS SDK Demos"
-            userAction["description"] = self.shareText.text
-            //let userActionData = NSKeyedArchiver.archivedDataWithRootObject(userAction)
+            if Gigya.session().lastLoginProvider == "twitter" {
+                userAction["title"] = self.shareText.text
+            }
+            else {
+                userAction["title"] = "Gigya iOS SDK Demos"
+                userAction["linkback"] = "http://gigya.com"
+                userAction["description"] = self.shareText.text
+            }
             
             var jsonData : NSData?
             jsonData = try? NSJSONSerialization.dataWithJSONObject(userAction, options: .PrettyPrinted )
             if jsonData != nil {
-                var jsonString = NSString(data: jsonData!, encoding: NSUTF8StringEncoding)!
+                let jsonString = NSString(data: jsonData!, encoding: NSUTF8StringEncoding)!
                 
-                var request = GSRequest.init(forMethod: "socialize.publishUserAction")
+                let request = GSRequest.init(forMethod: "socialize.publishUserAction")
                 request.parameters.setObject(jsonString, forKey: "userAction")
                 
                 request.sendWithResponseHandler({ (response: GSResponse!, error: NSError!) -> Void in
