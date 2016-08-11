@@ -68,6 +68,9 @@
                                 <rect key="frame" x="20" y="315" width="560" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Comments View"/>
+                                <connections>
+                                    <segue destination="yd0-6p-PUc" kind="presentation" id="dXB-aO-oKX"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social Connectivity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pX-WV-yo5">
                                 <rect key="frame" x="20" y="248" width="560" height="21"/>
@@ -116,7 +119,7 @@
                 <viewControllerPlaceholder storyboardName="PublishAction" id="bmJ-xw-wkO" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mey-dO-G2S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1703" y="12"/>
+            <point key="canvasLocation" x="1703" y="-12"/>
         </scene>
         <!--GSWebBridge-->
         <scene sceneID="zwc-ps-h68">
@@ -124,7 +127,15 @@
                 <viewControllerPlaceholder storyboardIdentifier="GSWebBridge" storyboardName="GSWebBridge" id="zCQ-sb-vM4" userLabel="GSWebBridge" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uvq-gx-pbg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1703" y="62"/>
+            <point key="canvasLocation" x="1703" y="37"/>
+        </scene>
+        <!--CommentView-->
+        <scene sceneID="VDV-p7-aD4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CommentView" id="yd0-6p-PUc" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UM5-dH-AKK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1705" y="85"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xiM-8x-vei">

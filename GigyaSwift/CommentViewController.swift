@@ -2,34 +2,55 @@
 //  CommentViewController.swift
 //  GigyaSwift
 //
-//  Created by NRasool on 17/03/2016.
+//  Created by Evan Ostroski on 8/11/16.
 //  Copyright © 2016 NRasool. All rights reserved.
 //
 
 import UIKit
 
-class CommentViewController: UIViewController {
-
+class CommentViewController : UIViewController, GSPluginViewDelegate {
+   
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func showCommentsAsDialog(sender: AnyObject) {
+        var params : [String : AnyObject] = [:]
+        params["categoryID"] = "Comments"
+        params["streamID"] = "Gigya-iOS-Demos"
+        
+        Gigya.showPluginDialogOver(self,
+                                   plugin: "comments.commentsUI",
+                                   parameters: params,
+                                   completionHandler: {(closedByUser : Bool, error : NSError!) -> Void in
+                                    if error == nil {
+                                        //success
+                                    }
+                                    else {
+                                        //Handle error
+                                    }
+        })
     }
-    */
+    
+    @IBAction func showCommentsAsSubView(sender: AnyObject) {
+        let statBarHeight = Float(UIApplication.sharedApplication().statusBarFrame.size.height)
+        var params : [String : AnyObject] = [:]
+        params["categoryID"] = "Comments"
+        params["streamID"] = "Gigya-iOS-Demos"
+        
+        let pluginView = GSPluginView.init(frame: CGRectMake(0,
+                                                             UIScreen.mainScreen().applicationFrame.size.height/2,
+                                                             UIScreen.mainScreen().applicationFrame.size.width,
+                                                             UIScreen.mainScreen().applicationFrame.size.height/2 + CGFloat(statBarHeight)))
+        pluginView.delegate = self
+        
+        pluginView.loadPlugin("comments.commentsUI", parameters: params)
+        self.view.addSubview(pluginView)
+    }
+}
 
-  }

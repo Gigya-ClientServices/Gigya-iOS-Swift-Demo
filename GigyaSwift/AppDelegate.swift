@@ -12,7 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        Gigya.initWithAPIKey("3_3bQC0dACcYGZ77HSQxvE6z1pNJ-fOWlRq4RQVmL_bUeyDiUsNNiPWpkO6Koc3w-g", application: application, launchOptions: launchOptions)
+        Gigya.initWithAPIKey("3_hoQxVv5W44L7c5fhBbaDFi9gOaaa2ZpbrBXlmlJoWISEk4D5J47X2iRnWwKnWyMW", application: application, launchOptions: launchOptions)
         Gigya.logout()
         return true
     }
