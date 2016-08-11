@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RTp-0P-5m7">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Publish Action Controller-->
+        <scene sceneID="GxR-jV-sbO">
+            <objects>
+                <viewController id="nst-fi-GCu" customClass="PublishActionController" customModule="GigyaSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eVT-gI-GO3"/>
+                        <viewControllerLayoutGuide type="bottom" id="RSO-n8-gLy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YHF-WF-Q9J">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Text to Publish" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wm2-lJ-Ape">
+                                <rect key="frame" x="20" y="64" width="560" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Td0-bg-i0v"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qfI-wC-KkX">
+                                <rect key="frame" x="20" y="100" width="560" height="192"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0W9-gx-Tq7">
+                                <rect key="frame" x="20" y="368" width="560" height="79"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="Uux-mP-Rhw"/>
+                                </constraints>
+                                <state key="normal" title="Publish User Action"/>
+                                <connections>
+                                    <action selector="publishButtonAction:" destination="nst-fi-GCu" eventType="touchUpInside" id="9OX-oX-OQD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAy-8t-Die">
+                                <rect key="frame" x="20" y="300" width="560" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="FFZ-91-EIL"/>
+                                </constraints>
+                                <string key="text">This will publish to the currently connected social network, if it's supported. If you are not currently connected to a social network, then this will fail with an error</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qfI-wC-KkX" firstAttribute="leading" secondItem="hAy-8t-Die" secondAttribute="leading" id="2i8-Qs-vTQ"/>
+                            <constraint firstItem="qfI-wC-KkX" firstAttribute="top" secondItem="wm2-lJ-Ape" secondAttribute="bottom" id="8PA-aR-uK8"/>
+                            <constraint firstItem="hAy-8t-Die" firstAttribute="top" secondItem="qfI-wC-KkX" secondAttribute="bottom" constant="8" symbolic="YES" id="Cxy-RW-Ce4"/>
+                            <constraint firstItem="hAy-8t-Die" firstAttribute="leading" secondItem="0W9-gx-Tq7" secondAttribute="leading" id="EE0-eq-7Ch"/>
+                            <constraint firstItem="0W9-gx-Tq7" firstAttribute="top" secondItem="hAy-8t-Die" secondAttribute="bottom" constant="8" symbolic="YES" id="Fuw-2N-HnN"/>
+                            <constraint firstItem="hAy-8t-Die" firstAttribute="trailing" secondItem="0W9-gx-Tq7" secondAttribute="trailing" id="HaQ-pe-HAd"/>
+                            <constraint firstItem="wm2-lJ-Ape" firstAttribute="leading" secondItem="qfI-wC-KkX" secondAttribute="leading" id="Ree-Ex-yAe"/>
+                            <constraint firstAttribute="trailing" secondItem="wm2-lJ-Ape" secondAttribute="trailing" constant="20" id="RjM-FB-lxr"/>
+                            <constraint firstItem="wm2-lJ-Ape" firstAttribute="leading" secondItem="YHF-WF-Q9J" secondAttribute="leading" constant="20" id="TtD-rD-VBE"/>
+                            <constraint firstItem="RSO-n8-gLy" firstAttribute="top" secondItem="0W9-gx-Tq7" secondAttribute="bottom" constant="153" id="XTr-oS-hPJ"/>
+                            <constraint firstItem="wm2-lJ-Ape" firstAttribute="top" secondItem="eVT-gI-GO3" secondAttribute="bottom" id="gZF-6G-6lT"/>
+                            <constraint firstItem="qfI-wC-KkX" firstAttribute="trailing" secondItem="hAy-8t-Die" secondAttribute="trailing" id="uvT-dM-bNz"/>
+                            <constraint firstItem="wm2-lJ-Ape" firstAttribute="trailing" secondItem="qfI-wC-KkX" secondAttribute="trailing" id="xhc-Cz-7Qm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bgg-4I-Zns">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="xzC-Bc-KLj">
+                            <connections>
+                                <segue destination="42i-Rx-tqL" kind="unwind" unwindAction="doneWithView:" id="nAf-6G-hCv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="shareText" destination="qfI-wC-KkX" id="JcY-VH-L28"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bar-3i-pqE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="42i-Rx-tqL" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1280" y="-174"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AoO-x1-mqH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RTp-0P-5m7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bdN-r9-61D">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nst-fi-GCu" kind="relationship" relationship="rootViewController" id="fFW-9e-eAT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RQr-Q6-nM5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="-174"/>
+        </scene>
+    </scenes>
+</document>

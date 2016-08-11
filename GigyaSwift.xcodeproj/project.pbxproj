@@ -13,6 +13,8 @@
 		6B1A1B4B1C89A9F700E02C5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B1A1B4A1C89A9F700E02C5C /* Assets.xcassets */; };
 		6B6EA5D21C89EC95009BDDFB /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 6B6EA5D11C89EC95009BDDFB /* Podfile */; };
 		6B6EA5DD1C89EF73009BDDFB /* GigyaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6EA5DC1C89EF73009BDDFB /* GigyaSDK.framework */; };
+		C84CC5BC1D5AA55F00EA93BE /* PublishActionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84CC5BB1D5AA55F00EA93BE /* PublishActionController.swift */; };
+		C84CC5BE1D5AA6A000EA93BE /* PublishAction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84CC5BD1D5AA6A000EA93BE /* PublishAction.storyboard */; };
 		C8B9966B1CD91C340003F305 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B9966A1CD91C340003F305 /* RootViewController.swift */; };
 		C8BFAF061CDBB8350020138E /* GSWebBridge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8BFAF051CDBB8350020138E /* GSWebBridge.storyboard */; };
 		C8BFAF081CDBB9290020138E /* GSWebBridgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BFAF071CDBB9290020138E /* GSWebBridgeViewController.swift */; };
@@ -29,6 +31,8 @@
 		6B6EA5DC1C89EF73009BDDFB /* GigyaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GigyaSDK.framework; sourceTree = "<group>"; };
 		7D77C8F842CF634C7379AC17 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5350D6DB19347889EB599C2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		C84CC5BB1D5AA55F00EA93BE /* PublishActionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishActionController.swift; sourceTree = "<group>"; };
+		C84CC5BD1D5AA6A000EA93BE /* PublishAction.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PublishAction.storyboard; sourceTree = "<group>"; };
 		C8B9966A1CD91C340003F305 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		C8BFAF051CDBB8350020138E /* GSWebBridge.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GSWebBridge.storyboard; sourceTree = "<group>"; };
 		C8BFAF071CDBB9290020138E /* GSWebBridgeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GSWebBridgeViewController.swift; sourceTree = "<group>"; };
@@ -81,10 +85,12 @@
 				6B6EA5DC1C89EF73009BDDFB /* GigyaSDK.framework */,
 				6B6EA5DB1C89EE54009BDDFB /* GigyaSwift-Bridging-Header.h */,
 				6B1A1B431C89A9F700E02C5C /* AppDelegate.swift */,
-				C8B9966A1CD91C340003F305 /* RootViewController.swift */,
 				C8BFAF071CDBB9290020138E /* GSWebBridgeViewController.swift */,
-				6B1A1B471C89A9F700E02C5C /* Root.storyboard */,
+				C84CC5BB1D5AA55F00EA93BE /* PublishActionController.swift */,
+				C8B9966A1CD91C340003F305 /* RootViewController.swift */,
 				C8BFAF051CDBB8350020138E /* GSWebBridge.storyboard */,
+				C84CC5BD1D5AA6A000EA93BE /* PublishAction.storyboard */,
+				6B1A1B471C89A9F700E02C5C /* Root.storyboard */,
 				6B1A1B4A1C89A9F700E02C5C /* Assets.xcassets */,
 				6B1A1B4F1C89A9F700E02C5C /* Info.plist */,
 			);
@@ -165,6 +171,7 @@
 				6B6EA5D21C89EC95009BDDFB /* Podfile in Resources */,
 				C8BFAF061CDBB8350020138E /* GSWebBridge.storyboard in Resources */,
 				6B1A1B491C89A9F700E02C5C /* Root.storyboard in Resources */,
+				C84CC5BE1D5AA6A000EA93BE /* PublishAction.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B1A1B441C89A9F700E02C5C /* AppDelegate.swift in Sources */,
+				C84CC5BC1D5AA55F00EA93BE /* PublishActionController.swift in Sources */,
 				C8BFAF081CDBB9290020138E /* GSWebBridgeViewController.swift in Sources */,
 				C8B9966B1CD91C340003F305 /* RootViewController.swift in Sources */,
 			);
