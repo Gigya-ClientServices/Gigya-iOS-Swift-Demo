@@ -12,6 +12,22 @@ class RootViewController: UIViewController, GSPluginViewDelegate, GSAccountsDele
     
     var user: GSAccount?
     
+    @IBAction func logout(sender: AnyObject) {
+        Gigya.logoutWithCompletionHandler( { (response: GSResponse!, error: NSError!) -> Void in
+            self.user = nil
+            if (error != nil) {
+                let alert = UIAlertController(title: "Gigya Native Mobile Logout",
+                    message: "There was a problem logging out off Gigya. Gigya returned error code \(error.code)",
+                    preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default) { (action) -> Void in
+                    print("Alert closed")
+                    })
+                self.presentViewController(alert, animated: true, completion: nil)
+                print("logout Error:\(error.localizedDescription)")
+            }
+        })
+    }
+    
     @IBAction func nativeLoginButtonAction(sender: AnyObject) {
         if (Gigya.session() == nil) {
             // To set parameters, you can use a Swift dictionary instead of an NSMutableDictionary
