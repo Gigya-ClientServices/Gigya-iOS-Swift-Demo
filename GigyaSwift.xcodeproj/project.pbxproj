@@ -143,7 +143,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
-				ORGANIZATIONNAME = NRasool;
+				ORGANIZATIONNAME = Gigya;
 				TargetAttributes = {
 					6B1A1B3F1C89A9F700E02C5C = {
 						CreatedOnToolsVersion = 7.2.1;
