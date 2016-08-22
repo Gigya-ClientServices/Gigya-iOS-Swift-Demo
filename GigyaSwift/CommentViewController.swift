@@ -27,7 +27,7 @@ class CommentViewController : UIViewController, GSPluginViewDelegate {
         Gigya.showPluginDialogOver(self,
                                    plugin: "comments.commentsUI",
                                    parameters: params,
-                                   completionHandler: {(closedByUser : Bool, error : NSError!) -> Void in
+                                   completionHandler: {(closedByUser : Bool?, error : NSError?) -> Void in
                                     if error == nil {
                                         //success
                                     }

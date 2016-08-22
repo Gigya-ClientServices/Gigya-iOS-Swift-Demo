@@ -13,17 +13,17 @@ class RootViewController: UIViewController, GSPluginViewDelegate, GSAccountsDele
     var user: GSAccount?
     
     @IBAction func logout(sender: AnyObject) {
-        Gigya.logoutWithCompletionHandler( { (response: GSResponse!, error: NSError!) -> Void in
+        Gigya.logoutWithCompletionHandler( { (response: GSResponse?, error: NSError?) -> Void in
             self.user = nil
             if (error != nil) {
                 let alert = UIAlertController(title: "Gigya Native Mobile Logout",
-                    message: "There was a problem logging out off Gigya. Gigya returned error code \(error.code)",
+                    message: "There was a problem logging out off Gigya. Gigya returned error code \(error!.code)",
                     preferredStyle: UIAlertControllerStyle.Alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default) { (action) -> Void in
                     print("Alert closed")
                     })
                 self.presentViewController(alert, animated: true, completion: nil)
-                print("logout Error:\(error.localizedDescription)")
+                print("logout Error:\(error!.localizedDescription)")
             }
         })
     }
@@ -39,19 +39,19 @@ class RootViewController: UIViewController, GSPluginViewDelegate, GSAccountsDele
             Gigya.showLoginProvidersDialogOver(self,
                 providers: ["facebook", "twitter", "googleplus", "linkedin"],
                 parameters: params,
-                completionHandler:  { (user: GSUser!, error: NSError!) -> Void in
-                    if (error != nil && error.code != 200001) {
+                completionHandler:  { (user: GSUser?, error: NSError?) -> Void in
+                    if (error != nil && error!.code != 200001) {
                         let alert = UIAlertController(title: "Gigya Native Mobile Login",
-                            message: "There was a problem logging in with Gigya. Gigya returned error code \(error.code)",
+                            message: "There was a problem logging in with Gigya. Gigya returned error code \(error!.code)",
                             preferredStyle: UIAlertControllerStyle.Alert)
                         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default) { (action) -> Void in
                             print("Alert closed")
                             })
                         self.presentViewController(alert, animated: true, completion: nil)
-                        print("showLoginProvidersDialogOver Error:\(error.localizedDescription)")
+                        print("showLoginProvidersDialogOver Error:\(error!.localizedDescription)")
                     } else {
                         // Anything?
-                        if let json = user.JSONString() {
+                        if let json = user!.JSONString() {
                             print("User: \(json)")
                         }
                     }
@@ -63,7 +63,7 @@ class RootViewController: UIViewController, GSPluginViewDelegate, GSAccountsDele
                 // Make Request to 'accounts.getAccountInfo' to get user if it's empty.
                 // Step 1 - Create the request and set the parameters
                 let request = GSRequest(forMethod: "accounts.getAccountInfo")
-                request.sendWithResponseHandler({(response: GSResponse!, error: NSError!) -> Void in
+                request.sendWithResponseHandler({(response: GSResponse?, error: NSError?) -> Void in
                     if (error == nil) {
                         self.user = response as? GSAccount
                     }
@@ -89,14 +89,14 @@ class RootViewController: UIViewController, GSPluginViewDelegate, GSAccountsDele
         Gigya.showPluginDialogOver(self,
             plugin: "accounts.screenSet",
             parameters: params,
-            completionHandler: {(closedByUser: Bool!, error: NSError!) -> Void in
+            completionHandler: {(closedByUser: Bool?, error: NSError?) -> Void in
                 if(error == nil) {
                     print("Login was successful")
                 }
                 else {
                     // Handle error
                     let alert = UIAlertController(title: "Error with login",
-                        message: error.localizedDescription,
+                        message: error!.localizedDescription,
                         preferredStyle: UIAlertControllerStyle.Alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default) { (action) -> Void in
                         print("Alert closed")
@@ -122,11 +122,11 @@ class RootViewController: UIViewController, GSPluginViewDelegate, GSAccountsDele
         }
         else {
             let request = GSRequest(forMethod: "accounts.getAccountInfo")
-            request.sendWithResponseHandler({(response: GSResponse!, error: NSError!) -> Void in
+            request.sendWithResponseHandler({(response: GSResponse?, error: NSError?) -> Void in
                 if (error == nil) {
                     self.user = response as? GSAccount
                     let alert = UIAlertController(title: "Gigya Session Test",
-                        message: "User is logged in\n\(response["profile"]["firstName"]) \(response["profile"]["lastName"]), \(response["profile"]["email"])",
+                        message: "User is logged in\n\(response!["profile"]["firstName"]) \(response!["profile"]["lastName"]), \(response!["profile"]["email"])",
                         preferredStyle: UIAlertControllerStyle.Alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default) { (action) -> Void in
                         print("Alert closed")

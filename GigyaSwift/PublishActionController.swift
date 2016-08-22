@@ -62,15 +62,15 @@ class PublishActionController: UIViewController {
                 let jsonString = NSString(data: jsonData!, encoding: NSUTF8StringEncoding)!
                 
                 let request = GSRequest.init(forMethod: "socialize.publishUserAction")
-                request.parameters.setObject(jsonString, forKey: "userAction")
+                request.parameters!.setObject(jsonString, forKey: "userAction")
                 
-                request.sendWithResponseHandler({ (response: GSResponse!, error: NSError!) -> Void in
+                request.sendWithResponseHandler({ (response: GSResponse?, error: NSError?) -> Void in
                     if error == nil {
                         print("success")
                     }
                     else {
                         print("error")
-                        print(error.description)
+                        print(error!.description)
                     }
                 })
             }
