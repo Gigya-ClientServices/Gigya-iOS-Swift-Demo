@@ -12,6 +12,9 @@ class RootViewController: UIViewController, GSPluginViewDelegate, GSAccountsDele
     
     var user: GSAccount?
     
+    @IBOutlet weak var sessionInfo: UITextView!
+    
+    
     @IBAction func logout(sender: AnyObject) {
         Gigya.logoutWithCompletionHandler( { (response: GSResponse?, error: NSError?) -> Void in
             self.user = nil
@@ -24,8 +27,11 @@ class RootViewController: UIViewController, GSPluginViewDelegate, GSAccountsDele
                     })
                 self.presentViewController(alert, animated: true, completion: nil)
                 print("logout Error:\(error!.localizedDescription)")
+            } else {
+                self.updateSessionInfo()
             }
         })
+        
     }
     
     @IBAction func nativeLoginButtonAction(sender: AnyObject) {
@@ -72,10 +78,10 @@ class RootViewController: UIViewController, GSPluginViewDelegate, GSAccountsDele
                                                     self.presentViewController(alert, animated: true, completion: nil)
                                                     print("showLoginProvidersDialogOver Error:\(error!.localizedDescription)")
                                                 } else {
-                                                    // Anything?
                                                     if let json = user!.JSONString() {
                                                         print("User: \(json)")
                                                     }
+                                                    self.updateSessionInfo()
                                                 }
                 }
             )
@@ -92,6 +98,7 @@ class RootViewController: UIViewController, GSPluginViewDelegate, GSAccountsDele
             completionHandler: {(closedByUser: Bool?, error: NSError?) -> Void in
                 if(error == nil) {
                     print("Login was successful")
+                    self.updateSessionInfo()
                 }
                 else {
                     // Handle error
@@ -144,6 +151,24 @@ class RootViewController: UIViewController, GSPluginViewDelegate, GSAccountsDele
         
     }
     
+    func updateSessionInfo() {
+        if Gigya.isSessionValid() {
+            let request = GSRequest(forMethod: "accounts.getAccountInfo")
+            request.sendWithResponseHandler({(response: GSResponse?, error: NSError?) -> Void in
+                if (error == nil) {
+                    self.user = response as? GSAccount
+                    self.sessionInfo.text = "User is logged in\n\(response!["profile"]["firstName"]) \(response!["profile"]["lastName"]), \(response!["profile"]["email"])"
+                }
+                else {
+                    self.sessionInfo.text = "Got error on getAccountInfo: \(error)"
+                }
+            })
+        }
+        else {
+            sessionInfo.text = "Not logged in"
+        }
+    }
+    
     //
     // GSPluginViewDelegate methods
     //
@@ -183,6 +208,9 @@ class RootViewController: UIViewController, GSPluginViewDelegate, GSAccountsDele
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        // Is there a Gigya session?
+        updateSessionInfo()
+        
     }
     
     override func didReceiveMemoryWarning() {

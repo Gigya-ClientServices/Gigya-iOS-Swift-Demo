@@ -89,6 +89,13 @@
                                     <action selector="logout:" destination="nzt-AC-DdH" eventType="touchUpInside" id="L1c-o5-nWt"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rnw-aX-ae1">
+                                <rect key="frame" x="20" y="429" width="560" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -103,7 +110,10 @@
                             <constraint firstItem="9pX-WV-yo5" firstAttribute="leading" secondItem="Fyl-bf-uHV" secondAttribute="leading" id="Jh9-Mj-34J"/>
                             <constraint firstItem="cyS-1E-D3g" firstAttribute="top" secondItem="BT2-18-k8G" secondAttribute="bottom" constant="8" symbolic="YES" id="Lh0-3H-KXd"/>
                             <constraint firstItem="9Ub-Bk-gXf" firstAttribute="leading" secondItem="jSn-9A-n0c" secondAttribute="leading" id="M2p-tt-FRH"/>
+                            <constraint firstItem="aFt-Vx-N2e" firstAttribute="top" secondItem="rnw-aX-ae1" secondAttribute="bottom" constant="43" id="PeU-e3-jyC"/>
                             <constraint firstItem="Cdf-L6-Q2K" firstAttribute="top" secondItem="cyS-1E-D3g" secondAttribute="bottom" constant="8" symbolic="YES" id="Qaf-eP-Bhb"/>
+                            <constraint firstItem="rnw-aX-ae1" firstAttribute="top" secondItem="9Ub-Bk-gXf" secondAttribute="bottom" constant="8" symbolic="YES" id="Rh6-7h-PUd"/>
+                            <constraint firstItem="rnw-aX-ae1" firstAttribute="trailing" secondItem="9Ub-Bk-gXf" secondAttribute="trailing" id="Tcs-Jc-piN"/>
                             <constraint firstItem="9Ub-Bk-gXf" firstAttribute="top" secondItem="jSn-9A-n0c" secondAttribute="bottom" constant="27" id="U9K-cy-bO2"/>
                             <constraint firstItem="BT2-18-k8G" firstAttribute="leading" secondItem="cyS-1E-D3g" secondAttribute="leading" id="VbV-El-5Uk"/>
                             <constraint firstItem="Fyl-bf-uHV" firstAttribute="leading" secondItem="jSn-9A-n0c" secondAttribute="leading" id="W13-3d-DBE"/>
@@ -117,11 +127,15 @@
                             <constraint firstItem="cyS-1E-D3g" firstAttribute="leading" secondItem="Cdf-L6-Q2K" secondAttribute="leading" id="l5a-96-Ay4"/>
                             <constraint firstItem="BT2-18-k8G" firstAttribute="top" secondItem="coc-w2-qHy" secondAttribute="bottom" constant="8" symbolic="YES" id="rWi-mo-zZy"/>
                             <constraint firstItem="Cdf-L6-Q2K" firstAttribute="trailing" secondItem="QfP-QC-IWD" secondAttribute="trailing" id="uS6-nc-rE3"/>
+                            <constraint firstItem="rnw-aX-ae1" firstAttribute="leading" secondItem="9Ub-Bk-gXf" secondAttribute="leading" id="uaE-M2-5aD"/>
                             <constraint firstItem="Cdf-L6-Q2K" firstAttribute="leading" secondItem="QfP-QC-IWD" secondAttribute="leading" id="xIf-Ig-Nat"/>
                             <constraint firstItem="QfP-QC-IWD" firstAttribute="top" secondItem="Cdf-L6-Q2K" secondAttribute="bottom" constant="3" id="yjj-4M-3Wv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Gigya iOS Swift Demo" id="ZmY-Ag-thR"/>
+                    <connections>
+                        <outlet property="sessionInfo" destination="rnw-aX-ae1" id="TLj-Z7-dtF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sk0-zp-Nbh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
