@@ -34,7 +34,7 @@
                     <navigationItem key="navigationItem" title="GSWebBridge" id="jvj-V8-vRb" userLabel="GSWebBridge">
                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="Ps1-re-zsD">
                             <connections>
-                                <segue destination="Bw5-L6-qoZ" kind="unwind" unwindAction="doneWithView:" id="CwM-wu-CX3"/>
+                                <segue destination="Bw5-L6-qoZ" kind="unwind" unwindAction="sideDoneWithView:" id="ezB-nx-LTW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

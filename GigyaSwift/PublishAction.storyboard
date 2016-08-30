@@ -75,7 +75,7 @@
                     <navigationItem key="navigationItem" id="bgg-4I-Zns">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="xzC-Bc-KLj">
                             <connections>
-                                <segue destination="42i-Rx-tqL" kind="unwind" unwindAction="doneWithView:" id="nAf-6G-hCv"/>
+                                <segue destination="42i-Rx-tqL" kind="unwind" unwindAction="sideDoneWithView:" id="QZy-RA-72T"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -44,9 +44,9 @@ class CommentViewController : UIViewController, GSPluginViewDelegate {
         params["streamID"] = "Gigya-iOS-Demos"
         
         let pluginView = GSPluginView.init(frame: CGRectMake(0,
-                                                             UIScreen.mainScreen().applicationFrame.size.height/2,
-                                                             UIScreen.mainScreen().applicationFrame.size.width,
-                                                             UIScreen.mainScreen().applicationFrame.size.height/2 + CGFloat(statBarHeight)))
+                                                             UIScreen.mainScreen().bounds.size.height/2,
+                                                             UIScreen.mainScreen().bounds.size.width,
+                                                             UIScreen.mainScreen().bounds.size.height/2 + CGFloat(statBarHeight)))
         pluginView.delegate = self
         
         pluginView.loadPlugin("comments.commentsUI", parameters: params)

@@ -9,11 +9,17 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var user: GSAccount?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         Gigya.initWithAPIKey("3_hoQxVv5W44L7c5fhBbaDFi9gOaaa2ZpbrBXlmlJoWISEk4D5J47X2iRnWwKnWyMW", application: application, launchOptions: launchOptions)
         Gigya.logout()
+        
+        let containerViewController = ContainerViewController()
+    
+        window!.rootViewController = containerViewController
+        window!.makeKeyAndVisible()
         return true
     }
 
