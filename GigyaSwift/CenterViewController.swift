@@ -32,46 +32,11 @@ class CenterViewController: UIViewController {
     @IBAction func loginTapped(sender: AnyObject) {
         delegate?.toggleRightPanel?()
     }
-    
-    @IBAction func mobileSessionCheckButtonAction(sender: AnyObject) {
-        print("mobileSessionCheckButtonAction called")
-        
-        // Is there a Gigya session?
-        if Gigya.isSessionValid() {
-            let request = GSRequest(forMethod: "accounts.getAccountInfo")
-            request.sendWithResponseHandler({(response: GSResponse?, error: NSError?) -> Void in
-                if (error == nil) {
-                    self.appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-                    self.appDelegate!.user = response as? GSAccount
-
-                    let alert = UIAlertController(title: "Gigya Session Test",
-                        message: "User is logged in\n\(response!["profile"]["firstName"]) \(response!["profile"]["lastName"]), \(response!["profile"]["email"])",
-                        preferredStyle: UIAlertControllerStyle.Alert)
-                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default) { (action) -> Void in
-                        print("Alert closed")
-                        })
-                    self.presentViewController(alert, animated: true, completion: nil)
-                }
-                else {
-                    print("Got error on getAccountInfo: \(error)")
-                }
-            })
-        }
-        else {
-            let alert = UIAlertController(title: "Gigya Session Test",
-                                          message: "You are not logged in",
-                                          preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default) { (action) -> Void in
-                print("Alert closed")
-                })
-            self.presentViewController(alert, animated: true, completion: nil)
-        }
-    }
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         // Is there a Gigya session?
         updateSessionInfo()
     }
@@ -84,17 +49,20 @@ class CenterViewController: UIViewController {
     // MARK: GIGYA
     func updateSessionInfo() {
         if Gigya.isSessionValid() {
-            let request = GSRequest(forMethod: "accounts.getAccountInfo")
-            request.sendWithResponseHandler({(response: GSResponse?, error: NSError?) -> Void in
-                if (error == nil) {
-                    self.appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-                    self.appDelegate!.user = response as? GSAccount
-                    self.sessionInfo.text = "User is logged in\n\(response!["profile"]["firstName"]) \(response!["profile"]["lastName"]), \(response!["profile"]["email"])"
+            if let ad = appDelegate {
+                if ad.user == nil {
+                    let request = GSRequest(forMethod: "accounts.getAccountInfo")
+                    request.sendWithResponseHandler({(response: GSResponse?, error: NSError?) -> Void in
+                        if (error == nil) {
+                            ad.user = response as? GSAccount
+                            self.sessionInfo.text = "User is logged in\nFirst Name: \(response!["profile"]["firstName"])\nLast Name: \(response!["profile"]["lastName"])\nEmail: \(response!["profile"]["email"])"
+                        }
+                        else {
+                            self.sessionInfo.text = "Got error on getAccountInfo: \(error)"
+                        }
+                    })
                 }
-                else {
-                    self.sessionInfo.text = "Got error on getAccountInfo: \(error)"
-                }
-            })
+            }
         }
         else {
             sessionInfo.text = "Not logged in"

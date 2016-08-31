@@ -13,7 +13,7 @@ class SidePanelViewController: UIViewController, GSPluginViewDelegate, GSAccount
     var appDelegate: AppDelegate?
 
     override func viewDidLoad() {
-        getAppDelegate()
+        self.appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
         super.viewDidLoad()
     }
@@ -21,10 +21,6 @@ class SidePanelViewController: UIViewController, GSPluginViewDelegate, GSAccount
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func getAppDelegate () {
-        self.appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     }
     
     @IBAction func sideDoneWithView(segue:UIStoryboardSegue) {

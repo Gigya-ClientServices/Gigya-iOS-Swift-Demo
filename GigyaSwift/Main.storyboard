@@ -99,19 +99,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wUN-Ob-yRZ">
-                                <rect key="frame" x="20" y="72" width="560" height="476"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Session Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCI-Lz-Pjz">
+                                <rect key="frame" x="20" y="72" width="101" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wUN-Ob-yRZ">
+                                <rect key="frame" x="20" y="101" width="560" height="72"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="0mf-AH-t8Q" firstAttribute="top" secondItem="wUN-Ob-yRZ" secondAttribute="bottom" constant="8" symbolic="YES" id="4GZ-0A-ClP"/>
+                            <constraint firstItem="0mf-AH-t8Q" firstAttribute="top" secondItem="wUN-Ob-yRZ" secondAttribute="bottom" constant="383" id="4GZ-0A-ClP"/>
                             <constraint firstItem="wUN-Ob-yRZ" firstAttribute="trailing" secondItem="kZG-Y0-i3E" secondAttribute="trailingMargin" id="Uq1-Dx-8XR"/>
-                            <constraint firstItem="wUN-Ob-yRZ" firstAttribute="top" secondItem="hFa-tO-Ore" secondAttribute="bottom" constant="8" symbolic="YES" id="YAG-UQ-aqF"/>
+                            <constraint firstItem="wUN-Ob-yRZ" firstAttribute="top" secondItem="hFa-tO-Ore" secondAttribute="bottom" constant="37" id="YAG-UQ-aqF"/>
                             <constraint firstItem="wUN-Ob-yRZ" firstAttribute="leading" secondItem="kZG-Y0-i3E" secondAttribute="leadingMargin" id="qza-jt-LUV"/>
                         </constraints>
                     </view>
