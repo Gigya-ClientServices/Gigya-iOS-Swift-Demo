@@ -17,7 +17,6 @@
 		C84CC5BE1D5AA6A000EA93BE /* PublishAction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84CC5BD1D5AA6A000EA93BE /* PublishAction.storyboard */; };
 		C84CC5C01D5D179800EA93BE /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84CC5BF1D5D179800EA93BE /* CommentViewController.swift */; };
 		C84CC5C21D5D18F100EA93BE /* CommentView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84CC5C11D5D18F100EA93BE /* CommentView.storyboard */; };
-		C8B9966B1CD91C340003F305 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B9966A1CD91C340003F305 /* RootViewController.swift */; };
 		C8BFAF061CDBB8350020138E /* GSWebBridge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8BFAF051CDBB8350020138E /* GSWebBridge.storyboard */; };
 		C8BFAF081CDBB9290020138E /* GSWebBridgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BFAF071CDBB9290020138E /* GSWebBridgeViewController.swift */; };
 		C8C378E81D70DCD0000E763A /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C378E71D70DCD0000E763A /* ContainerViewController.swift */; };
@@ -41,7 +40,6 @@
 		C84CC5BD1D5AA6A000EA93BE /* PublishAction.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PublishAction.storyboard; sourceTree = "<group>"; };
 		C84CC5BF1D5D179800EA93BE /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		C84CC5C11D5D18F100EA93BE /* CommentView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CommentView.storyboard; sourceTree = "<group>"; };
-		C8B9966A1CD91C340003F305 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		C8BFAF051CDBB8350020138E /* GSWebBridge.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GSWebBridge.storyboard; sourceTree = "<group>"; };
 		C8BFAF071CDBB9290020138E /* GSWebBridgeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GSWebBridgeViewController.swift; sourceTree = "<group>"; };
 		C8C378E71D70DCD0000E763A /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
@@ -100,7 +98,6 @@
 				C84CC5BF1D5D179800EA93BE /* CommentViewController.swift */,
 				C8BFAF071CDBB9290020138E /* GSWebBridgeViewController.swift */,
 				C84CC5BB1D5AA55F00EA93BE /* PublishActionController.swift */,
-				C8B9966A1CD91C340003F305 /* RootViewController.swift */,
 				C8C378E71D70DCD0000E763A /* ContainerViewController.swift */,
 				C8C378EB1D70DDBF000E763A /* CenterViewController.swift */,
 				C8C378ED1D70DDD2000E763A /* SidePanelViewController.swift */,
@@ -257,7 +254,6 @@
 				C8C378EE1D70DDD2000E763A /* SidePanelViewController.swift in Sources */,
 				C8BFAF081CDBB9290020138E /* GSWebBridgeViewController.swift in Sources */,
 				C8C378E81D70DCD0000E763A /* ContainerViewController.swift in Sources */,
-				C8B9966B1CD91C340003F305 /* RootViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
