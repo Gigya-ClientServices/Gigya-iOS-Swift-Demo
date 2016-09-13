@@ -64,7 +64,7 @@
 	<key>FacebookAppID</key>
 	<string>368592606648443</string>
 	<key>FacebookDisplayName</key>
-	<string>Gigya&apos;s Demo App</string>
+	<string>Gigya's Demo App</string>
 	<key>GigyaLogEnabled</key>
 	<false/>
 	<key>GigyaLoginDontLeaveApp</key>
@@ -97,9 +97,9 @@
 		<true/>
 	</dict>
 	<key>UILaunchStoryboardName</key>
-	<string>Root</string>
+	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
-	<string>Root</string>
+	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

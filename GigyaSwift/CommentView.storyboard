@@ -59,7 +59,7 @@
                     <navigationItem key="navigationItem" id="n1G-N1-hQf">
                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="WMn-fp-ihj">
                             <connections>
-                                <segue destination="3Ed-5h-1Ug" kind="unwind" unwindAction="doneWithView:" id="b3v-Gk-ACy"/>
+                                <segue destination="3Ed-5h-1Ug" kind="unwind" unwindAction="sideDoneWithView:" id="IIS-rk-HBo"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
