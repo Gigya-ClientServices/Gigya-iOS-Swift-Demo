@@ -41,7 +41,11 @@ class ContainerViewController: UIViewController {
         view.addSubview(centerNavigationController.view)
         addChildViewController(centerNavigationController)
         
-        centerNavigationController.didMoveToParentViewController(self)    }
+        centerNavigationController.didMoveToParentViewController(self)
+        
+        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "handlePanGesture:")
+        centerNavigationController.view.addGestureRecognizer(panGestureRecognizer)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -152,6 +156,39 @@ extension ContainerViewController: CenterViewControllerDelegate {
         }
     }
     
+}
+
+extension ContainerViewController: UIGestureRecognizerDelegate {
+    func handlePanGesture(recognizer: UIPanGestureRecognizer) {
+        let gestureIsDraggingFromLeftToRight = (recognizer.velocityInView(view).x > 0)
+        
+        switch(recognizer.state) {
+        case .Began:
+            if (currentState == .BothCollapsed) {
+                if (gestureIsDraggingFromLeftToRight) {
+                    addLeftPanelViewController()
+                } else {
+                    addRightPanelViewController()
+                }
+                
+                showShadowForCenterViewController(true)
+            }
+        case .Changed:
+            recognizer.view!.center.x = recognizer.view!.center.x + recognizer.translationInView(view).x
+            recognizer.setTranslation(CGPointZero, inView: view)
+        case .Ended:
+            if (leftViewController != nil) {
+                // animate the side panel open or closed based on whether the view has moved more or less than halfway
+                let hasMovedGreaterThanHalfway = recognizer.view!.center.x > view.bounds.size.width
+                animateLeftPanel(hasMovedGreaterThanHalfway)
+            } else if (rightViewController != nil) {
+                let hasMovedGreaterThanHalfway = recognizer.view!.center.x < 0
+                animateRightPanel(hasMovedGreaterThanHalfway)
+            }
+        default:
+            break
+        }
+    }
 }
 
 private extension UIStoryboard {
