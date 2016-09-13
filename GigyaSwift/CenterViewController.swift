@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 @objc
 protocol CenterViewControllerDelegate {
     optional func toggleLeftPanel()
@@ -22,6 +23,7 @@ class CenterViewController: UIViewController {
     var currentState: SlideOutState = .BothCollapsed
     
     @IBOutlet weak var sessionInfo: UITextView!
+    @IBOutlet weak var profilePhoto: UIImageView!
     
     // MARK: Button actions
     
@@ -56,6 +58,10 @@ class CenterViewController: UIViewController {
                         if (error == nil) {
                             ad.user = response as? GSAccount
                             self.sessionInfo.text = "User is logged in\nFirst Name: \(response!["profile"]["firstName"])\nLast Name: \(response!["profile"]["lastName"])\nEmail: \(response!["profile"]["email"])"
+                            
+                            if let url = response?["profile"]["photoURL"] as? String {
+                                self.profilePhoto.sd_setImageWithURL(NSURL(string: url))
+                            }
                         }
                         else {
                             self.sessionInfo.text = "Got error on getAccountInfo: \(error)"
@@ -66,10 +72,9 @@ class CenterViewController: UIViewController {
         }
         else {
             sessionInfo.text = "Not logged in"
+            self.profilePhoto.image = nil
         }
     }
-    
-    
 
     /*
     // MARK: - Navigation

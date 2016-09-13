@@ -12,7 +12,7 @@
                 <viewControllerPlaceholder storyboardName="PublishAction" id="yEv-sf-HXm" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zpW-cz-oaK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-529" y="869"/>
+            <point key="canvasLocation" x="280" y="965"/>
         </scene>
         <!--CommentView-->
         <scene sceneID="4Ja-qZ-JUn">
@@ -20,7 +20,7 @@
                 <viewControllerPlaceholder storyboardName="CommentView" id="3N8-0s-lFn" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OXO-iA-vBh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-374" y="869"/>
+            <point key="canvasLocation" x="435" y="965"/>
         </scene>
         <!--GSWebBridge-->
         <scene sceneID="wFX-tv-nl4">
@@ -28,7 +28,7 @@
                 <viewControllerPlaceholder storyboardName="GSWebBridge" id="1vk-8L-1NY" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fc5-vR-m6v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-220" y="869"/>
+            <point key="canvasLocation" x="589" y="965"/>
         </scene>
         <!--Side Panel View Controller-->
         <scene sceneID="xOS-Wk-Mvs">
@@ -85,7 +85,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hez-8T-Qrv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-374" y="410"/>
+            <point key="canvasLocation" x="434" y="412"/>
         </scene>
         <!--Center View Controller-->
         <scene sceneID="dTi-Bs-8Pb">
@@ -102,7 +102,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Session Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCI-Lz-Pjz">
                                 <rect key="frame" x="20" y="72" width="101" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wUN-Ob-yRZ">
@@ -119,13 +119,22 @@
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0so-U1-B2N">
+                                <rect key="frame" x="150" y="181" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="7sf-kk-cvu"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="0mf-AH-t8Q" firstAttribute="top" secondItem="0so-U1-B2N" secondAttribute="bottom" constant="75" id="3Cl-op-8nU"/>
                             <constraint firstItem="0mf-AH-t8Q" firstAttribute="top" secondItem="wUN-Ob-yRZ" secondAttribute="bottom" constant="383" id="4GZ-0A-ClP"/>
+                            <constraint firstItem="0so-U1-B2N" firstAttribute="top" secondItem="wUN-Ob-yRZ" secondAttribute="bottom" constant="8" symbolic="YES" id="7ef-Nz-Q8y"/>
                             <constraint firstItem="wUN-Ob-yRZ" firstAttribute="trailing" secondItem="kZG-Y0-i3E" secondAttribute="trailingMargin" id="Uq1-Dx-8XR"/>
                             <constraint firstItem="wUN-Ob-yRZ" firstAttribute="top" secondItem="hFa-tO-Ore" secondAttribute="bottom" constant="37" id="YAG-UQ-aqF"/>
                             <constraint firstItem="wUN-Ob-yRZ" firstAttribute="leading" secondItem="kZG-Y0-i3E" secondAttribute="leadingMargin" id="qza-jt-LUV"/>
+                            <constraint firstItem="0so-U1-B2N" firstAttribute="centerX" secondItem="wUN-Ob-yRZ" secondAttribute="centerX" id="z9z-cC-FyI"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -143,6 +152,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="profilePhoto" destination="0so-U1-B2N" id="1EY-Hd-pXY"/>
                         <outlet property="sessionInfo" destination="wUN-Ob-yRZ" id="Kti-Ul-vCD"/>
                     </connections>
                 </viewController>
@@ -205,7 +215,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="saO-Z4-ipq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1782" y="410"/>
+            <point key="canvasLocation" x="1798" y="412"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GVs-cg-Bxn">
@@ -223,7 +233,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B6w-9D-I3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="412"/>
+            <point key="canvasLocation" x="1117" y="-337"/>
         </scene>
     </scenes>
 </document>
