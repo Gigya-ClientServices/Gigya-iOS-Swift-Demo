@@ -156,6 +156,7 @@
 				TargetAttributes = {
 					6B1A1B3F1C89A9F700E02C5C = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -362,6 +363,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gigya.GigyaSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "GigyaSwift/GigyaSwift-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -384,6 +386,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gigya.GigyaSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "GigyaSwift/GigyaSwift-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
