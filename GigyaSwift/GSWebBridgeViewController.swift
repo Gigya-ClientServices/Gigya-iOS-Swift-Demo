@@ -53,9 +53,9 @@ class GSWebBridgeViewController:  UIViewController,GSWebBridgeDelegate, UIWebVie
         
     }
     
-    func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
+    func webView(webView: UIWebView, didFailLoadWithError error: NSError) {
         let alert = UIAlertController(title: "GSWebBridge Error",
-                                      message: error?.description,
+                                      message: error.description,
                                       preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default) { (action) -> Void in
             print("Alert closed")
