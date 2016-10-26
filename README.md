@@ -1,5 +1,9 @@
 # GigyaSwift
 This is an iOS Demo project written in Swift with XCode that provide simple connection of Gigya's native iOS SDK 
+
+## Requirements
+1. Xcode 7.3 (does NOT work in Xcode 8)
+2. Targets iOS 9.3 (does NOT work targetting iOS 10)
  
 ## Configuration
 **IMPORTANT** Ensure your version of XCode is updated to the latest version. 
