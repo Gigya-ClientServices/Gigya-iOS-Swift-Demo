@@ -10,13 +10,13 @@
 		35AE40377D8B2A0BAAF269B0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D77C8F842CF634C7379AC17 /* libPods.a */; };
 		6B1A1B441C89A9F700E02C5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1A1B431C89A9F700E02C5C /* AppDelegate.swift */; };
 		6B6EA5D21C89EC95009BDDFB /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 6B6EA5D11C89EC95009BDDFB /* Podfile */; };
-		6B6EA5DD1C89EF73009BDDFB /* GigyaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6EA5DC1C89EF73009BDDFB /* GigyaSDK.framework */; };
 		C8394B961D74D44000412CE8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8394B951D74D44000412CE8 /* LaunchScreen.xib */; };
 		C8394B981D764F7200412CE8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8394B971D764F7200412CE8 /* Images.xcassets */; };
 		C84CC5BC1D5AA55F00EA93BE /* PublishActionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84CC5BB1D5AA55F00EA93BE /* PublishActionController.swift */; };
 		C84CC5BE1D5AA6A000EA93BE /* PublishAction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84CC5BD1D5AA6A000EA93BE /* PublishAction.storyboard */; };
 		C84CC5C01D5D179800EA93BE /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84CC5BF1D5D179800EA93BE /* CommentViewController.swift */; };
 		C84CC5C21D5D18F100EA93BE /* CommentView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84CC5C11D5D18F100EA93BE /* CommentView.storyboard */; };
+		C84FDAD71DBFF50F0008DFA0 /* GigyaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84FDAD61DBFF50F0008DFA0 /* GigyaSDK.framework */; };
 		C8BFAF061CDBB8350020138E /* GSWebBridge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8BFAF051CDBB8350020138E /* GSWebBridge.storyboard */; };
 		C8BFAF081CDBB9290020138E /* GSWebBridgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BFAF071CDBB9290020138E /* GSWebBridgeViewController.swift */; };
 		C8C378E81D70DCD0000E763A /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C378E71D70DCD0000E763A /* ContainerViewController.swift */; };
@@ -31,7 +31,6 @@
 		6B1A1B4F1C89A9F700E02C5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B6EA5D11C89EC95009BDDFB /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6B6EA5DB1C89EE54009BDDFB /* GigyaSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GigyaSwift-Bridging-Header.h"; sourceTree = "<group>"; };
-		6B6EA5DC1C89EF73009BDDFB /* GigyaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GigyaSDK.framework; sourceTree = "<group>"; };
 		7D77C8F842CF634C7379AC17 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5350D6DB19347889EB599C2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C8394B951D74D44000412CE8 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
@@ -40,6 +39,7 @@
 		C84CC5BD1D5AA6A000EA93BE /* PublishAction.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PublishAction.storyboard; sourceTree = "<group>"; };
 		C84CC5BF1D5D179800EA93BE /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		C84CC5C11D5D18F100EA93BE /* CommentView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CommentView.storyboard; sourceTree = "<group>"; };
+		C84FDAD61DBFF50F0008DFA0 /* GigyaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GigyaSDK.framework; sourceTree = "<group>"; };
 		C8BFAF051CDBB8350020138E /* GSWebBridge.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GSWebBridge.storyboard; sourceTree = "<group>"; };
 		C8BFAF071CDBB9290020138E /* GSWebBridgeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GSWebBridgeViewController.swift; sourceTree = "<group>"; };
 		C8C378E71D70DCD0000E763A /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35AE40377D8B2A0BAAF269B0 /* libPods.a in Frameworks */,
-				6B6EA5DD1C89EF73009BDDFB /* GigyaSDK.framework in Frameworks */,
+				C84FDAD71DBFF50F0008DFA0 /* GigyaSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,7 +92,7 @@
 		6B1A1B421C89A9F700E02C5C /* GigyaSwift */ = {
 			isa = PBXGroup;
 			children = (
-				6B6EA5DC1C89EF73009BDDFB /* GigyaSDK.framework */,
+				C84FDAD61DBFF50F0008DFA0 /* GigyaSDK.framework */,
 				6B6EA5DB1C89EE54009BDDFB /* GigyaSwift-Bridging-Header.h */,
 				6B1A1B431C89A9F700E02C5C /* AppDelegate.swift */,
 				C84CC5BF1D5D179800EA93BE /* CommentViewController.swift */,
