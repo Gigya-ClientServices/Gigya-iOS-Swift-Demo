@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		35AE40377D8B2A0BAAF269B0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D77C8F842CF634C7379AC17 /* libPods.a */; };
+		4E2E8CBBC05355A7CABF52C5 /* libPods-GigyaSwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68403D758361FC5815DE99B8 /* libPods-GigyaSwift.a */; };
 		6B1A1B441C89A9F700E02C5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1A1B431C89A9F700E02C5C /* AppDelegate.swift */; };
 		6B6EA5D21C89EC95009BDDFB /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 6B6EA5D11C89EC95009BDDFB /* Podfile */; };
 		C8394B961D74D44000412CE8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8394B951D74D44000412CE8 /* LaunchScreen.xib */; };
@@ -16,37 +16,45 @@
 		C84CC5BE1D5AA6A000EA93BE /* PublishAction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84CC5BD1D5AA6A000EA93BE /* PublishAction.storyboard */; };
 		C84CC5C01D5D179800EA93BE /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84CC5BF1D5D179800EA93BE /* CommentViewController.swift */; };
 		C84CC5C21D5D18F100EA93BE /* CommentView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84CC5C11D5D18F100EA93BE /* CommentView.storyboard */; };
-		C84FDAD71DBFF50F0008DFA0 /* GigyaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84FDAD61DBFF50F0008DFA0 /* GigyaSDK.framework */; };
+		C8998A6F1DF8BDEC00E43F31 /* GigyaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8998A6E1DF8BDEC00E43F31 /* GigyaSDK.framework */; };
 		C8BFAF061CDBB8350020138E /* GSWebBridge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8BFAF051CDBB8350020138E /* GSWebBridge.storyboard */; };
 		C8BFAF081CDBB9290020138E /* GSWebBridgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BFAF071CDBB9290020138E /* GSWebBridgeViewController.swift */; };
 		C8C378E81D70DCD0000E763A /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C378E71D70DCD0000E763A /* ContainerViewController.swift */; };
 		C8C378EA1D70DD4E000E763A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8C378E91D70DD4E000E763A /* Main.storyboard */; };
 		C8C378EC1D70DDBF000E763A /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C378EB1D70DDBF000E763A /* CenterViewController.swift */; };
 		C8C378EE1D70DDD2000E763A /* SidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C378ED1D70DDD2000E763A /* SidePanelViewController.swift */; };
+		C8DE53421DF89A7800E16D8B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8DE533E1DF89A7800E16D8B /* Bolts.framework */; };
+		C8DE53431DF89A7800E16D8B /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8DE533F1DF89A7800E16D8B /* FBSDKCoreKit.framework */; };
+		C8DE53441DF89A7800E16D8B /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8DE53401DF89A7800E16D8B /* FBSDKLoginKit.framework */; };
+		C8DE53451DF89A7800E16D8B /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8DE53411DF89A7800E16D8B /* FBSDKShareKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		68403D758361FC5815DE99B8 /* libPods-GigyaSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GigyaSwift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B1A1B401C89A9F700E02C5C /* GigyaSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GigyaSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B1A1B431C89A9F700E02C5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B1A1B4F1C89A9F700E02C5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B6EA5D11C89EC95009BDDFB /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6B6EA5DB1C89EE54009BDDFB /* GigyaSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GigyaSwift-Bridging-Header.h"; sourceTree = "<group>"; };
-		7D77C8F842CF634C7379AC17 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5350D6DB19347889EB599C2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		7CD0480958C32650A851862C /* Pods-GigyaSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GigyaSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GigyaSwift/Pods-GigyaSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		C8394B951D74D44000412CE8 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		C8394B971D764F7200412CE8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C84CC5BB1D5AA55F00EA93BE /* PublishActionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishActionController.swift; sourceTree = "<group>"; };
 		C84CC5BD1D5AA6A000EA93BE /* PublishAction.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PublishAction.storyboard; sourceTree = "<group>"; };
 		C84CC5BF1D5D179800EA93BE /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		C84CC5C11D5D18F100EA93BE /* CommentView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CommentView.storyboard; sourceTree = "<group>"; };
-		C84FDAD61DBFF50F0008DFA0 /* GigyaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GigyaSDK.framework; sourceTree = "<group>"; };
+		C8998A6E1DF8BDEC00E43F31 /* GigyaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GigyaSDK.framework; path = GigyaSwift/GigyaSDK.framework; sourceTree = "<group>"; };
 		C8BFAF051CDBB8350020138E /* GSWebBridge.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GSWebBridge.storyboard; sourceTree = "<group>"; };
 		C8BFAF071CDBB9290020138E /* GSWebBridgeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GSWebBridgeViewController.swift; sourceTree = "<group>"; };
 		C8C378E71D70DCD0000E763A /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		C8C378E91D70DD4E000E763A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C8C378EB1D70DDBF000E763A /* CenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
 		C8C378ED1D70DDD2000E763A /* SidePanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidePanelViewController.swift; sourceTree = "<group>"; };
-		F068C83FDA61F83E75948C09 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C8DE533E1DF89A7800E16D8B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		C8DE533F1DF89A7800E16D8B /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		C8DE53401DF89A7800E16D8B /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		C8DE53411DF89A7800E16D8B /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		DD375A5A145E63AA7F1FA9BB /* Pods-GigyaSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GigyaSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-GigyaSwift/Pods-GigyaSwift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,20 +62,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35AE40377D8B2A0BAAF269B0 /* libPods.a in Frameworks */,
-				C84FDAD71DBFF50F0008DFA0 /* GigyaSDK.framework in Frameworks */,
+				C8DE53421DF89A7800E16D8B /* Bolts.framework in Frameworks */,
+				C8DE53431DF89A7800E16D8B /* FBSDKCoreKit.framework in Frameworks */,
+				C8DE53451DF89A7800E16D8B /* FBSDKShareKit.framework in Frameworks */,
+				C8998A6F1DF8BDEC00E43F31 /* GigyaSDK.framework in Frameworks */,
+				C8DE53441DF89A7800E16D8B /* FBSDKLoginKit.framework in Frameworks */,
+				4E2E8CBBC05355A7CABF52C5 /* libPods-GigyaSwift.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		51D58A9784777C7F2860C592 /* Frameworks */ = {
+		4FB3ED7411C35BD0D89353AD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7D77C8F842CF634C7379AC17 /* libPods.a */,
+				7CD0480958C32650A851862C /* Pods-GigyaSwift.debug.xcconfig */,
+				DD375A5A145E63AA7F1FA9BB /* Pods-GigyaSwift.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		6B1A1B371C89A9F700E02C5C = {
@@ -76,8 +89,8 @@
 				6B1A1B421C89A9F700E02C5C /* GigyaSwift */,
 				6B1A1B411C89A9F700E02C5C /* Products */,
 				6B6EA5D11C89EC95009BDDFB /* Podfile */,
-				E825B93CBF54F1384EB8E416 /* Pods */,
-				51D58A9784777C7F2860C592 /* Frameworks */,
+				4FB3ED7411C35BD0D89353AD /* Pods */,
+				A42723F3AF6283B59D796C91 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,7 +105,6 @@
 		6B1A1B421C89A9F700E02C5C /* GigyaSwift */ = {
 			isa = PBXGroup;
 			children = (
-				C84FDAD61DBFF50F0008DFA0 /* GigyaSDK.framework */,
 				6B6EA5DB1C89EE54009BDDFB /* GigyaSwift-Bridging-Header.h */,
 				6B1A1B431C89A9F700E02C5C /* AppDelegate.swift */,
 				C84CC5BF1D5D179800EA93BE /* CommentViewController.swift */,
@@ -112,13 +124,17 @@
 			path = GigyaSwift;
 			sourceTree = "<group>";
 		};
-		E825B93CBF54F1384EB8E416 /* Pods */ = {
+		A42723F3AF6283B59D796C91 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A5350D6DB19347889EB599C2 /* Pods.debug.xcconfig */,
-				F068C83FDA61F83E75948C09 /* Pods.release.xcconfig */,
+				C8998A6E1DF8BDEC00E43F31 /* GigyaSDK.framework */,
+				C8DE533E1DF89A7800E16D8B /* Bolts.framework */,
+				C8DE533F1DF89A7800E16D8B /* FBSDKCoreKit.framework */,
+				C8DE53401DF89A7800E16D8B /* FBSDKLoginKit.framework */,
+				C8DE53411DF89A7800E16D8B /* FBSDKShareKit.framework */,
+				68403D758361FC5815DE99B8 /* libPods-GigyaSwift.a */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,12 +144,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6B1A1B521C89A9F700E02C5C /* Build configuration list for PBXNativeTarget "GigyaSwift" */;
 			buildPhases = (
-				5063270F35AE3FD54CECE157 /* Check Pods Manifest.lock */,
+				D25B14DE06CFE8DB9C51FE34 /* [CP] Check Pods Manifest.lock */,
 				6B1A1B3C1C89A9F700E02C5C /* Sources */,
 				6B1A1B3D1C89A9F700E02C5C /* Frameworks */,
 				6B1A1B3E1C89A9F700E02C5C /* Resources */,
-				B7E973D8996EC68E2B6612C7 /* Embed Pods Frameworks */,
-				9812FAF57ACE5A366CD090CA /* Copy Pods Resources */,
+				DCAFE5C690F15A44FB07D883 /* [CP] Embed Pods Frameworks */,
+				EC24BE5E4EF907F791F93CEF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -156,6 +172,7 @@
 				TargetAttributes = {
 					6B1A1B3F1C89A9F700E02C5C = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 6L9YDAZBYN;
 						LastSwiftMigration = 0800;
 					};
 				};
@@ -196,49 +213,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5063270F35AE3FD54CECE157 /* Check Pods Manifest.lock */ = {
+		D25B14DE06CFE8DB9C51FE34 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		9812FAF57ACE5A366CD090CA /* Copy Pods Resources */ = {
+		DCAFE5C690F15A44FB07D883 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GigyaSwift/Pods-GigyaSwift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B7E973D8996EC68E2B6612C7 /* Embed Pods Frameworks */ = {
+		EC24BE5E4EF907F791F93CEF /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GigyaSwift/Pods-GigyaSwift-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -346,15 +363,19 @@
 		};
 		6B1A1B531C89A9F700E02C5C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5350D6DB19347889EB599C2 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 7CD0480958C32650A851862C /* Pods-GigyaSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6L9YDAZBYN;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$SRCROOT/**",
 					"$(PROJECT_DIR)/GigyaSwift",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = GigyaSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -369,15 +390,19 @@
 		};
 		6B1A1B541C89A9F700E02C5C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F068C83FDA61F83E75948C09 /* Pods.release.xcconfig */;
+			baseConfigurationReference = DD375A5A145E63AA7F1FA9BB /* Pods-GigyaSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6L9YDAZBYN;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$SRCROOT/**",
 					"$(PROJECT_DIR)/GigyaSwift",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = GigyaSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
