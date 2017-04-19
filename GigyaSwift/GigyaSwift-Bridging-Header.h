@@ -9,5 +9,5 @@
 
 #endif /* GigyaSwift_Bridging_Header_h */
 
-#import "GigyaSDK.framework/Versions/A/Headers/Gigya.h"
+#import "../GigyaSDK.framework/Headers/Gigya.h"
 #import <SDWebImage/UIImageView+WebCache.h>

@@ -16,18 +16,34 @@
 		C84CC5BE1D5AA6A000EA93BE /* PublishAction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84CC5BD1D5AA6A000EA93BE /* PublishAction.storyboard */; };
 		C84CC5C01D5D179800EA93BE /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84CC5BF1D5D179800EA93BE /* CommentViewController.swift */; };
 		C84CC5C21D5D18F100EA93BE /* CommentView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84CC5C11D5D18F100EA93BE /* CommentView.storyboard */; };
-		C8998A6F1DF8BDEC00E43F31 /* GigyaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8998A6E1DF8BDEC00E43F31 /* GigyaSDK.framework */; };
 		C8BFAF061CDBB8350020138E /* GSWebBridge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8BFAF051CDBB8350020138E /* GSWebBridge.storyboard */; };
 		C8BFAF081CDBB9290020138E /* GSWebBridgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BFAF071CDBB9290020138E /* GSWebBridgeViewController.swift */; };
 		C8C378E81D70DCD0000E763A /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C378E71D70DCD0000E763A /* ContainerViewController.swift */; };
 		C8C378EA1D70DD4E000E763A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8C378E91D70DD4E000E763A /* Main.storyboard */; };
 		C8C378EC1D70DDBF000E763A /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C378EB1D70DDBF000E763A /* CenterViewController.swift */; };
 		C8C378EE1D70DDD2000E763A /* SidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C378ED1D70DDD2000E763A /* SidePanelViewController.swift */; };
+		C8CC35CF1EA804DA001FABF2 /* GigyaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8CC35CE1EA804DA001FABF2 /* GigyaSDK.framework */; };
+		C8CC35D01EA806B4001FABF2 /* GigyaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8CC35CE1EA804DA001FABF2 /* GigyaSDK.framework */; };
+		C8CC35D11EA806B4001FABF2 /* GigyaSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C8CC35CE1EA804DA001FABF2 /* GigyaSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C8DE53421DF89A7800E16D8B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8DE533E1DF89A7800E16D8B /* Bolts.framework */; };
 		C8DE53431DF89A7800E16D8B /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8DE533F1DF89A7800E16D8B /* FBSDKCoreKit.framework */; };
 		C8DE53441DF89A7800E16D8B /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8DE53401DF89A7800E16D8B /* FBSDKLoginKit.framework */; };
 		C8DE53451DF89A7800E16D8B /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8DE53411DF89A7800E16D8B /* FBSDKShareKit.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C8CC35D21EA806B4001FABF2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C8CC35D11EA806B4001FABF2 /* GigyaSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		68403D758361FC5815DE99B8 /* libPods-GigyaSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GigyaSwift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,13 +59,13 @@
 		C84CC5BD1D5AA6A000EA93BE /* PublishAction.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PublishAction.storyboard; sourceTree = "<group>"; };
 		C84CC5BF1D5D179800EA93BE /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		C84CC5C11D5D18F100EA93BE /* CommentView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CommentView.storyboard; sourceTree = "<group>"; };
-		C8998A6E1DF8BDEC00E43F31 /* GigyaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GigyaSDK.framework; path = GigyaSwift/GigyaSDK.framework; sourceTree = "<group>"; };
 		C8BFAF051CDBB8350020138E /* GSWebBridge.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GSWebBridge.storyboard; sourceTree = "<group>"; };
 		C8BFAF071CDBB9290020138E /* GSWebBridgeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GSWebBridgeViewController.swift; sourceTree = "<group>"; };
 		C8C378E71D70DCD0000E763A /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		C8C378E91D70DD4E000E763A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C8C378EB1D70DDBF000E763A /* CenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
 		C8C378ED1D70DDD2000E763A /* SidePanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidePanelViewController.swift; sourceTree = "<group>"; };
+		C8CC35CE1EA804DA001FABF2 /* GigyaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GigyaSDK.framework; sourceTree = "<group>"; };
 		C8DE533E1DF89A7800E16D8B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		C8DE533F1DF89A7800E16D8B /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		C8DE53401DF89A7800E16D8B /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
@@ -62,10 +78,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8CC35D01EA806B4001FABF2 /* GigyaSDK.framework in Frameworks */,
 				C8DE53421DF89A7800E16D8B /* Bolts.framework in Frameworks */,
 				C8DE53431DF89A7800E16D8B /* FBSDKCoreKit.framework in Frameworks */,
 				C8DE53451DF89A7800E16D8B /* FBSDKShareKit.framework in Frameworks */,
-				C8998A6F1DF8BDEC00E43F31 /* GigyaSDK.framework in Frameworks */,
+				C8CC35CF1EA804DA001FABF2 /* GigyaSDK.framework in Frameworks */,
 				C8DE53441DF89A7800E16D8B /* FBSDKLoginKit.framework in Frameworks */,
 				4E2E8CBBC05355A7CABF52C5 /* libPods-GigyaSwift.a in Frameworks */,
 			);
@@ -127,7 +144,7 @@
 		A42723F3AF6283B59D796C91 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C8998A6E1DF8BDEC00E43F31 /* GigyaSDK.framework */,
+				C8CC35CE1EA804DA001FABF2 /* GigyaSDK.framework */,
 				C8DE533E1DF89A7800E16D8B /* Bolts.framework */,
 				C8DE533F1DF89A7800E16D8B /* FBSDKCoreKit.framework */,
 				C8DE53401DF89A7800E16D8B /* FBSDKLoginKit.framework */,
@@ -150,6 +167,7 @@
 				6B1A1B3E1C89A9F700E02C5C /* Resources */,
 				DCAFE5C690F15A44FB07D883 /* [CP] Embed Pods Frameworks */,
 				EC24BE5E4EF907F791F93CEF /* [CP] Copy Pods Resources */,
+				C8CC35D21EA806B4001FABF2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
